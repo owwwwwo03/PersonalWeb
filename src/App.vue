@@ -5,6 +5,8 @@
 </template>
 
 <script lang="ts">
+
+  import {usestore} from 'vuex';
   import Home from './views/Home.vue';
 
 </script>
