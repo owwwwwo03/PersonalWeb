@@ -4,11 +4,10 @@
   </div>  
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 
-  import {usestore} from 'vuex';
+  import {{useStore}} from 'vuex';
   import Home from './views/Home.vue';
-
 </script>
 
 <style scoped>
