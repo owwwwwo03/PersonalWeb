@@ -10,7 +10,7 @@
   import Home from './views/Home.vue';
 
   const store = useStore();
-
+  
 </script>
 
 <style scoped>

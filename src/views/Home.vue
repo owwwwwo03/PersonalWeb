@@ -1,7 +1,13 @@
 <template>
-    <h1>你好</h1>
+    <div>
+      <Header></Header>
+      <h1>你好</h1>
+      <Footer></Footer>
+    </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
+  import Header from './Header.vue';
+  import Footer from './Footer.vue';
   import { useStore } from 'vuex';
   import{ref,onMounted} from 'vue';
 
