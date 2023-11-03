@@ -1,7 +1,20 @@
 import { createApp } from 'vue';
-import './style.css';
+
 import App from './App.vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+//import axiosPlugin from './lib/xhr'
 import router from './router';
 import store from './store';
+import { LoadingPlugin } from 'vue-loading-overlay';
+import 'bootstrap';
+import './style.css';
 
-createApp(App).mount('#app')
+const app =createApp(App);
+
+app.use(VueAxios, axios);
+app.use(LoadingPlugin);
+app.use(router);
+app.use(store);
+
+app.mount("#app");

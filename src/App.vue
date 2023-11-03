@@ -6,8 +6,11 @@
 
 <script lang="ts" setup>
 
-  import {{useStore}} from 'vuex';
+  import { useStore } from 'vuex';
   import Home from './views/Home.vue';
+
+  const store = useStore();
+
 </script>
 
 <style scoped>
