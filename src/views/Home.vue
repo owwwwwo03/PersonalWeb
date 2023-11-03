@@ -1,7 +1,11 @@
 <template>
     <div>
       <Header></Header>
-      <h1>你好</h1>
+        <!-- Render active component contents with vue transition -->
+     
+
+        <!-- Scroll to top -->
+      
       <Footer></Footer>
     </div>
 </template>
