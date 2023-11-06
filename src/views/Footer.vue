@@ -1,14 +1,14 @@
 <template>
   <div class="container mx-auto ">
     <div
-			class="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark"
+			class="pt-5 pb-2 mt-5 border-top border-primary-light dark:border-secondary-dark"
 		>
         <!-- Footer social links -->
         <div
-				class="flex flex-col justify-center items-center mb-12 sm:mb-20"
+				class="d-flex flex-column justify-content-center align-items-center mb-3 mb-sm-5"
 			>
 				<p
-					class="font-general-semibold text-3xl sm:text-4xl font-semibold text-primary-dark dark:text-primary-light mb-5"
+					class="font-weight-bold fs-3 fs-sm-4 text-primary-dark dark:text-primary-light mb-2"
 				>
 					Follow me
 				</p>
@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-
+	
 </script>
 
 <style>

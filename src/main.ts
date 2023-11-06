@@ -8,7 +8,8 @@ import router from './router';
 import store from './store';
 import { LoadingPlugin } from 'vue-loading-overlay';
 import 'bootstrap';
-import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import './style.css';
 
 const app =createApp(App);
 
