@@ -1,11 +1,11 @@
 <template>
-  <nav id="nav" class="sm:container sm:mx-auto">
+  <nav id="nav" class="navbar navbar-expand-sm container mx-auto">
     <!-- Header start -->
-    <div
-			class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6"
-		>
+    <div 
+      class="max-w-screen-lg xl:max-w-screen-xl navbar navbar-expand-sm flex-sm-row justify-content-between align-items-center my-6"
+    >
         <!-- Header menu links and small screen hamburger menu -->
-        <div class="flex justify-between items-center px-4 sm:px-0">
+        <div class="d-flex justify-content-between align-items-center px-4 px-sm-0">
             <!-- Header logos -->
             <div>
 
