@@ -8,11 +8,11 @@
         <div class="d-flex justify-content-between align-items-center px-4 px-sm-0">
             <!-- Header logos -->
             <div>
-
+             <h1>Personal</h1>
             </div>
             <!-- Theme switcher small screen -->
             <div>
-
+              
             </div>
             <!-- Small screen hamburger menu -->
             <div>
