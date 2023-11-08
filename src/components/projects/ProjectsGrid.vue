@@ -1,6 +1,6 @@
 <template>
     <!-- Projects grid -->
-   <section class="pt-10 sm:pt-14">
+   <section class="pt-10 pt-sm-14">
         <!-- Projects grid title -->
 
         <!-- Filter and search projects -->

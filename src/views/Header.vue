@@ -21,7 +21,7 @@
 
         </div>
         <!-- Header links -->
-
+        <HeaderLinks :showModal="showModal" :isOpen="isOpen" />
         <!-- Header right section buttons -->
     </div>
   </nav>
@@ -29,6 +29,7 @@
 
 <script lang="ts" setup>
     import { useStore } from 'vuex';
+    import HeaderLinks from '../components/header/HeaderLinks.vue';
     const store = useStore();
 </script>
 

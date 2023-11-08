@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-0.5">
+  <div :class="appTheme" class="pt-0.5">
       <!-- App header -->
       <Header class="mb-5 mb-sm-8"></Header>
       <!-- Render active component contents with vue transition -->     

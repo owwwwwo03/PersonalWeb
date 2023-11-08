@@ -1,5 +1,9 @@
 <template>
-    <h1>   Hi</h1>
+    <!-- Banner -->
+	<div class="container mx-auto">
+        <h1>Hi</h1>
+    </div>	
+    
 </template>
 <script lang="ts" setup>
   
