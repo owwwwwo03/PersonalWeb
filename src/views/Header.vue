@@ -7,9 +7,13 @@
         <!-- Header menu links and small screen hamburger menu -->
         <div class="d-flex justify-content-between align-items-center px-4 px-sm-0">
             <!-- Header logos -->
-            <div>
-             <h1>Personal</h1>
-            </div>
+            <!-- Header logos -->
+				<div>
+					<router-link to="/"
+						>
+            <h1>Personal</h1>
+					</router-link>
+				</div>
             <!-- Theme switcher small screen -->
             <div>
               

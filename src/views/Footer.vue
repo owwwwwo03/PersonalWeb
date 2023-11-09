@@ -1,66 +1,64 @@
 <template>
-  <div class="container">
-    <div class="pt-5 pb-3 border-top border-primary-light">
-        <!-- Footer social links -->
-        <div class="row justify-content-center mb-4">
-            <div class="col-12">
-                <h3 class="font-weight-bold text-primary-dark">
-                    Follow-me
-                </h3>
-            </div>
-            <div class="col-12">
-                <ul class="list-inline">
-					<h1>ooo</h1>
-                    <li v-for="social in socials" :key="social.id" class="list-inline-item">
-                        <a :href="social.url" target="_blank" class="text-gray-400">
-                            <i :class="social.icon"></i>
-							<i :class="social.name"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>ooo</p>
+          <ul class="list-inline">
+            <li v-for="social in socials" :key="social.id" class="list-inline-item">
+              <a :href="social.url" target="_blank" class="text-primary-dark">
+                <i class="icon" :class="social.icon"></i>
+                {{ social.name }}
+              </a>
+            </li>
+          </ul>
         </div>
-
-        <!-- Footer copyright -->
-        
+      </div>
     </div>
-</div>
-</template>
-
-<script lang="ts">
-import feather from 'feather-icons';
-import 'bootstrap/dist/css/bootstrap.css';
-import { onMounted, onUpdated } from 'vue';
-
-const socials =[
-	{
+  </template>
+  
+  <script lang="ts">
+  import feather from 'feather-icons';
+  import 'bootstrap/dist/css/bootstrap.css';
+  import { onMounted, reactive, onUpdated } from 'vue';
+  
+  export default {
+    setup() {
+      const socials = reactive([
+        {
           id: 2,
           name: 'Twitter',
           icon: 'twitter',
-          url: 'https://twitter.com/anappdesign',
+          url: 'https://twitter.com',
         },
         {
           id: 3,
           name: 'Medium',
           icon: 'book',
-          url: 'https://stoman.medium.com/anappdesign',
+          url: 'https://medium.com',
         },
         {
           id: 4,
           name: 'Instagram',
           icon: 'instagram',
-          url: 'https://instagram.com/anappdesign',
-        },	
-	];
-
-onMounted(()=>{
-	feather.replace();
-});
-onUpdated(()=>{
-	feather.replace();
-});
-</script>
-
-<style>
-
-</style>
+          url: 'https://instagram.com',
+        },
+      ]);
+  
+      onMounted(() => {
+        feather.replace();
+      });
+      onUpdated(()=>{
+	    feather.replace();
+      });
+  
+      return {
+        socials,
+      };
+    },
+  };
+  </script>
+  
+  <style>
+  /* 样式可以根据需要添加 */
+  </style>
+  

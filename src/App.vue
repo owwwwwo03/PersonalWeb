@@ -7,14 +7,9 @@
 			  <router-view :theme="appTheme" />
 		  </transition>
       <!-- Scroll to top -->
-      <back-to-top
-        visibleoffset="500"
-        right="30px"
-        bottom="20px"
-        class="shadow-lg"
-      >
+      <button class="btn btn-primary back-to-top" data-bs-toggle="backtotop">
         <i data-feather="chevron-up"></i>
-      </back-to-top>    
+      </button>   
        
       <!-- App footer -->
       <Footer></Footer>
@@ -45,33 +40,33 @@
   display: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-.vue-back-to-top {
-  @apply p-2 bg-pink-500 hover:bg-pink-600 text-white transition
-      duration-500
-      ease-in-out
-      transform
-      hover:-translate-y-1 hover:scale-110;
+.back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
   border-radius: 50%;
   font-size: 22px;
   line-height: 22px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Add Bootstrap classes for shadow and hover effect. */
+.back-to-top:hover {
+  transform: translateY(-1);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* You can also style the icon using Bootstrap classes if you want. */
+.back-to-top i {
+  font-size: 1.5rem;
+  vertical-align: middle;
 }
 
 .fade-enter-active {
