@@ -1,27 +1,24 @@
 <template>
-  <nav id="nav" class="navbar navbar-expand-sm container mx-auto">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
     <!-- Header start -->
-    <div 
-      class="max-w-screen-lg xl:max-w-screen-xl navbar navbar-expand-sm flex-sm-row justify-content-between align-items-center my-6"
-    >
+    <div class="container-fluid">
         <!-- Header menu links and small screen hamburger menu -->
-        <div class="d-flex justify-content-between align-items-center px-4 px-sm-0">
-            <!-- Header logos -->
-            <!-- Header logos -->
-				<div>
-					<router-link to="/"
-						>
-            <h1>Personal</h1>
-					</router-link>
-				</div>
-            <!-- Theme switcher small screen -->
-            <div>
-              
-            </div>
-            <!-- Small screen hamburger menu -->
-            <div>
+        <div class="">
+              <!-- Header logos -->
+          <div>
+            <router-link to="/"
+              >
+              <a class="navbar-brand">Personal</a>
+            </router-link>
+          </div>
+              <!-- Theme switcher small screen -->
+              <div>
                 
-            </div>
+              </div>
+              <!-- Small screen hamburger menu -->
+              <div>
+                  
+              </div>
 
         </div>
         <!-- Header links -->
@@ -38,5 +35,6 @@
 </script>
 
 <style>
+
 
 </style>
