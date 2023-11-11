@@ -6,10 +6,9 @@
         <div class="">
               <!-- Header logos -->
           <div>
-            <router-link to="/"
-              >
-              <a class="navbar-brand">Personal</a>
-            </router-link>
+            
+            <a href="/" class="navbar-brand custom-font">Personal</a>
+            
           </div>
               <!-- Theme switcher small screen -->
               <div>
@@ -35,6 +34,9 @@
 </script>
 
 <style>
+  .custom-font{
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
 
 </style>

@@ -1,7 +1,7 @@
 <template>
 	<!-- Header links -->
 	<div class="container">
-		<div class="collapse navbar-collapse">
+		<div class="collapse navbar-collapse custom-font">
       	<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<a href="/projects" class="nav-link" aria-label="Projects">Projects</a>
 				<a href="/about" class="nav-link" aria-label="About Me">About</a>
@@ -13,3 +13,9 @@
 <script lang="ts" setup>
     
 </script>
+
+<style scoped>
+.custom-font{
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>

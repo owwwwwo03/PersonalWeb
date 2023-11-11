@@ -2,10 +2,9 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <p>ooo</p>
           <ul class="list-inline">
             <li v-for="social in socials" :key="social.id" class="list-inline-item">
-              <a :href="social.url" target="_blank" class="text-primary-dark">
+              <a :href="social.url" target="_blank" class="text-primary-dark custom-font">
                 <i class="icon" :class="social.icon"></i>
                 {{ social.name }}
               </a>
@@ -59,6 +58,8 @@
   </script>
   
   <style>
-  /* 样式可以根据需要添加 */
+  .custom-font{
+      font-family: Arial, Helvetica, sans-serif;
+    }
   </style>
   

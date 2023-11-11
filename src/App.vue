@@ -51,8 +51,8 @@
   bottom: 50px;
   right: 50px;
   border-radius: 50%;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 30px;
+  line-height: 35px;
   transition: transform 0.5s ease-in-out;
 }
 
