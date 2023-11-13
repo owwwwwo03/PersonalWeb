@@ -1,42 +1,42 @@
 <template>
   <div :class="appTheme" class="">
-      <!-- App header -->
-      <Header class="mb-5 mb-sm-8"></Header>
-      <!-- Render active component contents with vue transition -->     
-      <transition name="fade" mode="out-in">
-			  <router-view :theme="appTheme" />
-		  </transition>
-      <!-- Scroll to top -->
-      <button class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
-        <i data-feather="chevron-up"></i>
-      </button>   
-       
-      <!-- App footer -->
-      <Footer></Footer>
-    </div> 
+    <!-- App header -->
+    <Header class="mb-5 mb-sm-8"></Header>
+    <!-- Render active component contents with vue transition -->
+    <transition name="fade" mode="out-in">
+      <router-view :theme="appTheme" />
+    </transition>
+    <!-- Scroll to top -->
+    <button class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
+      <i data-feather="chevron-up"></i>
+    </button>
+
+    <!-- App footer -->
+    <Footer></Footer>
+  </div>
 </template>
 
 <script lang="ts" setup>
 
-  import Header from './views/Header.vue';
-  import Footer from './views/Footer.vue';
-  import { useStore } from 'vuex';
-  import{ ref, onMounted, onUpdated} from 'vue';
-  import feather from 'feather-icons';
+import Header from './views/Header.vue';
+import Footer from './views/Footer.vue';
+import { useStore } from 'vuex';
+import { ref, onMounted, onUpdated } from 'vue';
+import feather from 'feather-icons';
 
-  const store = useStore();
+const store = useStore();
 
-  onMounted(()=>{
-    feather.replace();
-  });
-  onUpdated(()=>{
-    feather.replace();
-  });
-  
+onMounted(() => {
+  feather.replace();
+});
+onUpdated(() => {
+  feather.replace();
+});
+
 </script>
 
 <style scoped>
-[v-cloak]{
+[v-cloak] {
   display: none;
 }
 
@@ -46,6 +46,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
 .back-to-top {
   position: fixed;
   bottom: 50px;
