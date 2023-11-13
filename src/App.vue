@@ -1,5 +1,5 @@
 <template>
-  <div :class="appTheme" class="pt-0.5">
+  <div :class="appTheme" class="">
       <!-- App header -->
       <Header class="mb-5 mb-sm-8"></Header>
       <!-- Render active component contents with vue transition -->     
@@ -7,7 +7,7 @@
 			  <router-view :theme="appTheme" />
 		  </transition>
       <!-- Scroll to top -->
-      <button class="btn btn-primary back-to-top" data-bs-toggle="backtotop">
+      <button class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
         <i data-feather="chevron-up"></i>
       </button>   
        
@@ -50,9 +50,6 @@
   position: fixed;
   bottom: 50px;
   right: 50px;
-  border-radius: 50%;
-  font-size: 30px;
-  line-height: 35px;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -68,6 +65,7 @@
   font-size: 1.5rem;
   vertical-align: middle;
 }
+
 
 .fade-enter-active {
   animation: coming 0.4s;

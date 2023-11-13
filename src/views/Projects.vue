@@ -1,6 +1,5 @@
 <template>
     <div class="container mx-auto">
-        <h1>WOO</h1>
 		<ProjectsGrid></ProjectsGrid>
 	</div>
 </template>

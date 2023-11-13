@@ -1,19 +1,19 @@
 <template>
     <section
-		class="flex flex-col sm:justify-between items-center sm:flex-row mt-12 sm:mt-10"
+		class=""
 	>
 		<!-- Banner left contents -->
-		<div class="w-full md:w-1/3 text-left">
+		<div class="">
 			<h1
-				class="font-general-semibold text-4xl md:text-4xl xl:text-6xl text-center sm:text-left text-ternary-dark dark:text-primary-light"
+				class=""
 			>
-				Hi My name is Sean.
+				Banner
 			</h1>
 			
 		</div>
 
 		<!-- Banner right illustration -->
-		<div class="w-full md:w-2/3 text-right float-right">
+		<div class="">
 			
 		</div>
 	</section>

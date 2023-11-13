@@ -4,7 +4,7 @@
         <div class="col-12">
           <ul class="list-inline">
             <li v-for="social in socials" :key="social.id" class="list-inline-item">
-              <a :href="social.url" target="_blank" class="text-primary-dark custom-font">
+              <a :href="social.url" target="_blank" class="nav-link text-primary-dark custom-font">
                 <i class="icon" :class="social.icon"></i>
                 {{ social.name }}
               </a>

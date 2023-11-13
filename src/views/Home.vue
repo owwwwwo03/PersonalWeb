@@ -2,8 +2,8 @@
 	<Banner class="mb-5 mb-sm-8" />
 	<div class="container mx-auto">
         <!-- Projects -->
-		<ProjectsGrid />
-    </div>	
+		  <ProjectsGrid />
+  </div>	
     
 </template>
 <script lang="ts" setup>
