@@ -9,17 +9,34 @@
       </div>
       <!-- Header links -->
       <HeaderLinks :showModal="showModal" :isOpen="isOpen" />
-      <div class="d-flex p-2"> 
-        <a> Language</a>
+      <div class="dropdown">
+        <button data-feather="globe" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+          aria-expanded="false">          
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">English</a></li>
+          <li><a class="dropdown-item" href="#">繁體中文</a></li>
+          <li><a class="dropdown-item" href="#">日本語</a></li>
+        </ul>
       </div>
     </div>
   </nav>
 </template>
 
 <script lang="ts" setup>
+import feather from 'feather-icons';
 import { useStore } from 'vuex';
+import { onMounted, reactive, onUpdated } from 'vue';
 import HeaderLinks from '../components/header/HeaderLinks.vue';
 const store = useStore();
+
+onMounted(() => {
+  feather.replace();
+});
+onUpdated(() => {
+  feather.replace();
+});
+
 </script>
 
 <style scoped>
