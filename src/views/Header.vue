@@ -27,7 +27,7 @@
 import feather from 'feather-icons';
 import { useStore } from 'vuex';
 import { onMounted, reactive, onUpdated } from 'vue';
-import HeaderLinks from '../components/header/HeaderLinks.vue';
+import HeaderLinks from '../components/header_/HeaderLinks.vue';
 const store = useStore();
 
 onMounted(() => {
