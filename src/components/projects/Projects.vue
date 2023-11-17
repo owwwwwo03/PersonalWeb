@@ -8,9 +8,12 @@
             </div>
             <!-- Projects grid -->
             <div class="">
-                <div class="">
 
-                </div>
+                <!-- Open AR -->
+                <router-link to ="">
+
+                </router-link>
+                
             </div>
         </section>
     </div>

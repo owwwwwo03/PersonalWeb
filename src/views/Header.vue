@@ -7,7 +7,7 @@
       <div class="d-flex">
         <a href="/" class="navbar-brand custom-font">Home</a>
       </div>
-      <!-- Header links -->
+
       <!-- Header links -->
       <div class="container-fluid">
         <div class="custom-font">
@@ -18,6 +18,7 @@
           </ul>
         </div>
       </div>
+      <!-- Header links global-->
       <div class="dropdown">
         <button data-feather="globe" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
           aria-expanded="false">

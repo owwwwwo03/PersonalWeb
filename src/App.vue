@@ -1,5 +1,5 @@
 <template>
-  <div :class="appTheme" class="">
+  <div :class="appTheme">
     <!-- App header -->
     <Header class="mb-5 mb-sm-8"></Header>
     <!-- Render active component contents with vue transition -->
@@ -10,7 +10,6 @@
     <button class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
       <i data-feather="chevron-up"></i>
     </button>
-
     <!-- App footer -->
     <Footer></Footer>
   </div>
