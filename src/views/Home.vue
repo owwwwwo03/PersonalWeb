@@ -8,9 +8,9 @@
     
 </template>
 <script lang="ts" setup>
-   import Banner from './Banner.vue';
-   import About from './About.vue';
-   import ProjectsGrid from '../components/projects/ProjectsGrid.vue';
+   import Banner from '../components/banner/Banner.vue';
+   import About from '../components/about/About.vue';
+   import ProjectsGrid from '../components/projects/projectsContent/ProjectsGrid.vue';
 </script>
 
 <style scoped>

@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-    import ProjectsGrid from '../components/projects/ProjectsGrid.vue';
+    import ProjectsGrid from './projectsContent/ProjectsGrid.vue';
 </script>
 
 <style>

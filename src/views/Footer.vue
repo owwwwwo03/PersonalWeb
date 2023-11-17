@@ -14,44 +14,39 @@
   </div>
 </template>
   
-<script lang="ts">
+<script lang="ts" setup>
 import feather from 'feather-icons';
 import { useStore } from 'vuex';
 import { onMounted, reactive, onUpdated } from 'vue';
 const store = useStore();
 
-export default {
-  setup() {
-    const socials = reactive([
-      {
-        id: 2,
-        name: 'LinkedIn',
-        url: 'https://twitter.com',
-      },
-      {
-        id: 3,
-        name: 'GitHub',
-        url: 'https://medium.com',
-      },
-      {
-        id: 4,
-        name: 'Instagram',
-        url: 'https://instagram.com',
-      },
-    ]);
-
-    onMounted(() => {
-      feather.replace();
-    });
-    onUpdated(() => {
-      feather.replace();
-    });
-
-    return {
-      socials,
-    };
+const socials = reactive([
+  {
+    id: 2,
+    name: 'LinkedIn',
+    url: 'https://twitter.com',
   },
-};
+  {
+    id: 3,
+    name: 'GitHub',
+    url: 'https://medium.com',
+  },
+  {
+    id: 4,
+    name: 'Instagram',
+    url: 'https://instagram.com',
+  },
+]);
+
+onMounted(() => {
+  feather.replace();
+});
+onUpdated(() => {
+  feather.replace();
+});
+
+
+
 </script>
   
 <style>
