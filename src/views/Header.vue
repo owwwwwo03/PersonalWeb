@@ -8,10 +8,19 @@
         <a href="/" class="navbar-brand custom-font">Home</a>
       </div>
       <!-- Header links -->
-      <HeaderLinks :showModal="showModal" :isOpen="isOpen" />
+      <!-- Header links -->
+      <div class="container-fluid">
+        <div class="custom-font">
+          <ul class="navbar-nav">
+            <a href="/projects" class="nav-link" aria-label="Projects">Projects</a>
+            <a href="/about" class="nav-link" aria-label="About Me">About</a>
+            <a href="/contact" class="nav-link" aria-label="Contact">Contact</a>
+          </ul>
+        </div>
+      </div>
       <div class="dropdown">
         <button data-feather="globe" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-          aria-expanded="false">          
+          aria-expanded="false">
         </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
           <li><a class="dropdown-item" href="#">English</a></li>
@@ -27,7 +36,7 @@
 import feather from 'feather-icons';
 import { useStore } from 'vuex';
 import { onMounted, reactive, onUpdated } from 'vue';
-import HeaderLinks from '../components/header_/HeaderLinks.vue';
+
 const store = useStore();
 
 onMounted(() => {
