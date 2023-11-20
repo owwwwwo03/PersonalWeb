@@ -20,7 +20,7 @@
                 </div>
                 <!-- Project Gallery -->
                 <div class="projectGallery" v-for="item in useProjectData" :key="item.id">
-                    <router-link to="" class="" aria-label="">
+                    <router-link :to="item.url" class="" aria-label="">
                         <div>
                             <img class="" />
                         </div>
