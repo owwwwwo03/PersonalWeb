@@ -7,20 +7,40 @@
                 <h1 class="">Projects</h1>
             </div>
             <!-- Projects grid -->
-            <div class="">
+            <div class="filter">
+                <!--Filter and search projects-->
+                <div class="flex justify-between">
+                    <div class="flex justify-between">
+                        <span class="">
+                            <i class="text-primary"></i>
+                        </span>
 
-                <!-- Open AR -->
-                <router-link to ="">
+                    </div>
 
-                </router-link>
-                
+                </div>
+                <!-- Project Gallery -->
+                <div class="projectGallery">
+                    <router-link to="" class="" aria-label="">
+                        <div>
+                            <img class="" />
+                        </div>
+                        <div class="text-center px-4 py-6">
+                            <p class="font-weight-bold text-xl text-dark mb-2">{{useProjectData[0].title}}</p>
+                            <span class="font-weight-medium text-lg text-dark">{{ }}</span>
+                        </div>
+                    </router-link>
+                </div>
+
+
             </div>
         </section>
     </div>
 </template>
 
 <script lang="ts" setup>
+ import useProjectData from '../../data/projects';
 
+ 
 </script>
 
 <style></style>
