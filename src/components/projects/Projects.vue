@@ -19,14 +19,14 @@
 
                 </div>
                 <!-- Project Gallery -->
-                <div class="projectGallery">
+                <div class="projectGallery" v-for="item in useProjectData" :key="item.id">
                     <router-link to="" class="" aria-label="">
                         <div>
                             <img class="" />
                         </div>
                         <div class="text-center px-4 py-6">
-                            <p class="font-weight-bold text-xl text-dark mb-2">{{useProjectData[0].title}}</p>
-                            <span class="font-weight-medium text-lg text-dark">{{ }}</span>
+                            <p class="font-weight-bold text-xl text-dark mb-2">{{ item.title }}</p>
+                            <span class="font-weight-medium text-lg text-dark">{{ item.category }}</span>
                         </div>
                     </router-link>
                 </div>
@@ -38,9 +38,9 @@
 </template>
 
 <script lang="ts" setup>
- import useProjectData from '../../data/projects';
+import useProjectData from '../../data/projects';
 
- 
+
 </script>
 
 <style></style>
