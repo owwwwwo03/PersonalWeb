@@ -7,7 +7,7 @@
       <router-view :theme="appTheme" />
     </transition>
     <!-- Scroll to top -->
-    <button class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
+    <button @click="topFunction()" class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
       <i data-feather="chevron-up"></i>
     </button>
     <!-- App footer -->
@@ -24,6 +24,11 @@ import { ref, onMounted, onUpdated } from 'vue';
 import feather from 'feather-icons';
 
 const store = useStore();
+
+const topFunction = () =>{
+  document.body.scrollTop =0;
+  document.documentElement.scrollTop = 0;
+};
 
 onMounted(() => {
   feather.replace();
