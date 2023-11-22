@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../components/about/About.vue';
 import Projects from '../components/projects/Projects.vue';
-import OpenAR from '../components/projects/contents/OpenAR.vue';
+import FabAR from '../components/projects/contents/FabAR.vue';
 import Doddle from '../components/projects/contents/Doddle.vue';
 import MetaHuman from '../components/projects/contents/MetaHuman.vue';
 import VBike from '../components/projects/contents/VBike.vue';
@@ -26,9 +26,9 @@ const routes = [
           name: 'About'
      },
      {
-          path: '/projects/openAR',
-          component: OpenAR,
-          name: 'OpenAR'
+          path: '/projects/fabAR',
+          component: FabAR,
+          name: 'FabAR'
      },
      {
           path: '/projects/doddle',
