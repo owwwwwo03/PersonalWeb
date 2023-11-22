@@ -20,14 +20,43 @@
       </div>
       <!-- Header links global-->
       <div class="dropdown">
-        <button data-feather="globe" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-          aria-expanded="false">
+        <button data-feather="globe" type="button" id="dropdownLangsButton" data-bs-toggle="dropdown"
+          aria-expanded="false" @click="() => { isLangsHidden = !isLangsHidden }">
         </button>
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-          <li><a class="dropdown-item" href="#">English</a></li>
-          <li><a class="dropdown-item" href="#">繁體中文</a></li>
-          <li><a class="dropdown-item" href="#">日本語</a></li>
-        </ul>
+        <div :class="{ hidden: isLangsHidden }">
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLangsButton">
+            <li>
+              <button type="button" class="dropdown-item d-flex" @click="changeLanguage('en-US')">
+                <div class="d-flex items-center">
+                  <div class="w-6">
+                    <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'en-US' }" />
+                  </div>
+                  English
+                </div>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex justify-content-between" @click="changeLanguage('zh-TW')">
+                <div class="d-flex items-center">
+                  <div class="w-6">
+                    <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'zh-TW' }" />
+                  </div>
+                  繁體中文
+                </div>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="dropdown-item d-flex justify-content-between" @click="changeLanguage('ja-JP')">
+                <div class="d-flex items-center">
+                  <div class="w-6">
+                    <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'ja-JP' }" />
+                  </div>
+                  日本語
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -36,9 +65,25 @@
 <script lang="ts" setup>
 import feather from 'feather-icons';
 import { useStore } from 'vuex';
-import { onMounted, reactive, onUpdated } from 'vue';
+import { CheckIcon } from '@heroicons/vue/24/solid';
+import { onMounted, ref, reactive, onUpdated } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 
 const store = useStore();
+const { locale } = useI18n();
+
+const isLangsHidden = ref(true);
+const selectedLanguage = ref("");
+
+
+const changeLanguage = (lang) => {
+  locale.value = lang;
+  selectedLanguage.value = lang;
+  isLangsHidden.value = true;
+  console.log(selectedLanguage.value);
+}
+
 
 onMounted(() => {
   feather.replace();
