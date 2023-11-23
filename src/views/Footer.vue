@@ -1,16 +1,14 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <ul class="list-inline">
-          <li v-for="social in socials" :key="social.id" class="list-inline-item">
-            <a :href="social.url" target="_blank" class="nav-link custom-font">
+  <div class="container mx-auto">  
+      <div class="flex justify-center">
+        <ul class="list-none flex space-x-4">
+          <li v-for="social in socials" :key="social.id">
+            <a :href="social.url" target="_blank" class="text-500 hover:text-blue-700">
               {{ social.name }}
             </a>
           </li>
         </ul>
       </div>
-    </div>
   </div>
 </template>
   

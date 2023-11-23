@@ -1,11 +1,11 @@
 <template>
   <nav class="sm:container sm:mx-auto">
     <!-- Header start -->
-    <div class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6">
+    <div class="z-10 max-w-screen-lg mx-auto block sm:flex sm:justify-between sm:items-center my-6">
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header logos -->
-      <div class>
-        <a href="/" class="custom-font flex justify-evenly items-center px-4 sm:px-0">Home</a>
+      <div class="flex justify-between items-center px-4 sm:px-0">
+        <a href="/" class="custom-font">Home</a>
       </div>
 
       <!-- Header links -->
@@ -19,12 +19,12 @@
         </div>
       </div>
       <!-- Header links global-->
-      <div>
-        <button type="button" @click="() => { isLangsHidden = !isLangsHidden }">
+      <div >
+        <button type="button" class="relative" @click="() => { isLangsHidden = !isLangsHidden }">
           <i data-feather="globe"></i>
         </button>
         <div id="dropdown-langs" :class="{ hidden: isLangsHidden }"
-          class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16 mr-16">
+          class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16 ml-[-10rem]">
           <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="langs-button">
             <li>
               <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('en-US')">
@@ -105,5 +105,11 @@ onUpdated(() => {
 
 .custom-font {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#nav a.router-link-exact-active {
+	@apply text-indigo-700;
+	@apply dark:text-indigo-400;
+	@apply font-medium;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div :class="appTheme">
     <!-- App header -->
-    <Header class="pt-0.5"></Header>
+    <Header></Header>
     <!-- Render active component contents with vue transition -->
     <transition name="fade" mode="out-in">
       <router-view :theme="appTheme"/>

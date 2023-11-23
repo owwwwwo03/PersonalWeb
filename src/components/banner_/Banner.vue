@@ -1,11 +1,11 @@
 <template>
-	<section class="pt-5 pt-sm-5">
+	<section class="pt-5 sm:pt-5">
 		<!-- Banner left contents -->
 		<div class='projects-carousel'>
-			<ul class="carousel-body">
+			<ul class="carousel-body flex">
 				<li class="carousel-item fade">
-					<RouterLink to="/">
-						<img src="">
+					<RouterLink to="/" class="block">
+						<img src="" class="w-full">
 					</RouterLink>
 				</li>
 			</ul>
