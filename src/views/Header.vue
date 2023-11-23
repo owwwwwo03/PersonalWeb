@@ -5,7 +5,7 @@
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header logos -->
       <div class>
-        <a href="/" class="navbar-brand custom-font">Home</a>
+        <a href="/" class="custom-font flex justify-evenly items-center px-4 sm:px-0">Home</a>
       </div>
 
       <!-- Header links -->
@@ -19,15 +19,16 @@
         </div>
       </div>
       <!-- Header links global-->
-      <div class="dropdown">
-        <button data-feather="globe" type="button" id="dropdownLangsButton" data-bs-toggle="dropdown"
-          aria-expanded="false" @click="() => { isLangsHidden = !isLangsHidden }">
+      <div>
+        <button type="button" @click="() => { isLangsHidden = !isLangsHidden }">
+          <i data-feather="globe"></i>
         </button>
-        <div :class="{ hidden: isLangsHidden }">
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLangsButton">
+        <div id="dropdown-langs" :class="{ hidden: isLangsHidden }"
+          class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16 mr-16">
+          <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="langs-button">
             <li>
-              <button type="button" class="dropdown-item flex" @click="changeLanguage('en-US')">
-                <div class="flex items-center">
+              <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('en-US')">
+                <div class="inline-flex items-center">
                   <div class="w-6">
                     <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'en-US' }" />
                   </div>
@@ -36,8 +37,8 @@
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item flex justify-content-between" @click="changeLanguage('zh-TW')">
-                <div class="flex items-center">
+              <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('zh-TW')">
+                <div class="inline-flex items-center">
                   <div class="w-6">
                     <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'zh-TW' }" />
                   </div>
@@ -46,8 +47,8 @@
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item flex justify-content-between" @click="changeLanguage('ja-JP')">
-                <div class="flex items-center">
+              <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('ja-JP')">
+                <div class="inline-flex items-center">
                   <div class="w-6">
                     <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'ja-JP' }" />
                   </div>
@@ -58,6 +59,7 @@
           </ul>
         </div>
       </div>
+
     </div>
   </nav>
 </template>
@@ -74,7 +76,7 @@ const store = useStore();
 const { locale } = useI18n();
 
 const isLangsHidden = ref(true);
-const selectedLanguage = ref("");
+const selectedLanguage = ref("zh-TW");
 
 
 const changeLanguage = (lang) => {
