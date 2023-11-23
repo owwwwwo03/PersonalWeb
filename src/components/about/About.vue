@@ -1,10 +1,10 @@
 <template>
     <section
-		class="pt-5 pt-sm-5"
+		class="pt-5 sm:pt-5"
 	>
 		<!-- About left contents -->
 		<div class="text-center">
-			<h1 class="">
+			<h1 class="text-4xl font-bold">
 				About
 			</h1>
 			
