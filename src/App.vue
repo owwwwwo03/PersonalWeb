@@ -1,10 +1,10 @@
 <template>
   <div :class="appTheme">
     <!-- App header -->
-    <Header class="mb-5 mb-sm-8"></Header>
+    <Header class="pt-0.5"></Header>
     <!-- Render active component contents with vue transition -->
     <transition name="fade" mode="out-in">
-      <router-view :theme="appTheme" />
+      <router-view :theme="appTheme"/>
     </transition>
     <!-- Scroll to top -->
     <button @click="topFunction()" class="btn back-to-top btn-lg" data-bs-toggle="backtotop">

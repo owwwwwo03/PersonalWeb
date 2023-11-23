@@ -1,20 +1,20 @@
 <template>
-  <nav class="main-header navbar navbar-expand">
+  <nav class="sm:container sm:mx-auto">
     <!-- Header start -->
-    <div class="d-flex p-3 justify-content-between align-items-center w-100">
+    <div class="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center my-6">
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header logos -->
-      <div class="d-flex">
+      <div class>
         <a href="/" class="navbar-brand custom-font">Home</a>
       </div>
 
       <!-- Header links -->
       <div class="container-fluid">
         <div class="custom-font">
-          <ul class="navbar-nav">
-            <a href="/projects" class="nav-link" aria-label="Projects">Projects</a>
-            <a href="/about" class="nav-link" aria-label="About Me">About</a>
-            <a href="/contact" class="nav-link" aria-label="Contact">Contact</a>
+          <ul class="flex space-x-4">
+            <a href="/projects" class="nav-link">Projects</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/contact" class="nav-link">Contact</a>
           </ul>
         </div>
       </div>
@@ -26,8 +26,8 @@
         <div :class="{ hidden: isLangsHidden }">
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownLangsButton">
             <li>
-              <button type="button" class="dropdown-item d-flex" @click="changeLanguage('en-US')">
-                <div class="d-flex items-center">
+              <button type="button" class="dropdown-item flex" @click="changeLanguage('en-US')">
+                <div class="flex items-center">
                   <div class="w-6">
                     <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'en-US' }" />
                   </div>
@@ -36,8 +36,8 @@
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item d-flex justify-content-between" @click="changeLanguage('zh-TW')">
-                <div class="d-flex items-center">
+              <button type="button" class="dropdown-item flex justify-content-between" @click="changeLanguage('zh-TW')">
+                <div class="flex items-center">
                   <div class="w-6">
                     <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'zh-TW' }" />
                   </div>
@@ -46,8 +46,8 @@
               </button>
             </li>
             <li>
-              <button type="button" class="dropdown-item d-flex justify-content-between" @click="changeLanguage('ja-JP')">
-                <div class="d-flex items-center">
+              <button type="button" class="dropdown-item flex justify-content-between" @click="changeLanguage('ja-JP')">
+                <div class="flex items-center">
                   <div class="w-6">
                     <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'ja-JP' }" />
                   </div>

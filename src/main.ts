@@ -7,12 +7,12 @@ import VueAxios from 'vue-axios';
 import router from './router';
 import store from './store';
 import { LoadingPlugin } from 'vue-loading-overlay';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-//import './style.css';
+import './css/index';
+//import 'bootstrap';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import i18n from './config/i18n';
 
-const app =createApp(App);
+const app = createApp(App);
 
 app.use(VueAxios, axios);
 app.use(LoadingPlugin);
