@@ -12,9 +12,9 @@
       <div class="container-fluid">
         <div class="custom-font">
           <ul class="flex space-x-4">
-            <a href="/projects" class="nav-link">Projects</a>
-            <a href="/about" class="nav-link">About</a>
-            <a href="/contact" class="nav-link">Contact</a>
+            <a href="/projects" class="nav-link">{{$t("project-title")}}</a>
+            <a href="/about" class="nav-link">{{$t("about-title")}}</a>
+            <a href="/contact" class="nav-link">{{$t("contact-title")}}</a>
           </ul>
         </div>
       </div>
@@ -77,7 +77,6 @@ const { locale } = useI18n();
 
 const isLangsHidden = ref(true);
 const selectedLanguage = ref("zh-TW");
-
 
 const changeLanguage = (lang) => {
   locale.value = lang;
