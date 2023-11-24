@@ -22,12 +22,12 @@ const socials = reactive([
   {
     id: 2,
     name: 'LinkedIn',
-    url: 'https://twitter.com',
+    url: 'https://www.linkedin.com/in/yi-xiang-su-898396169/',
   },
   {
     id: 3,
     name: 'GitHub',
-    url: 'https://medium.com',
+    url: 'https://github.com/owwwwwo03',
   },
   {
     id: 4,
