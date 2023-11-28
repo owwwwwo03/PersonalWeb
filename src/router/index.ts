@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import About from '../components/about/About.vue';
 import Projects from '../components/projects/Projects.vue';
+import Contact from '../components/contact/Contact.vue'
 import FabAR from '../components/projects/contents/FabAR.vue';
 import Doddle from '../components/projects/contents/Doddle.vue';
 import MetaHuman from '../components/projects/contents/MetaHuman.vue';
@@ -24,6 +25,11 @@ const routes = [
           path: '/about',
           component: About,
           name: 'About'
+     },
+     {
+          path: '/contact',
+          component: Contact,
+          name: 'Contact'
      },
      {
           path: '/projects/fabAR',
