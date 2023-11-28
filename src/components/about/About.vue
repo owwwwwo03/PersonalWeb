@@ -1,15 +1,16 @@
 <template>
     <section
 		class="pt-5 sm:pt-5"
-	>
-		<!-- About left contents -->
-		<div class="text-center">
-			<h1 class="text-4xl font-bold">
+	>		
+		<div class="text-left ml-36">
+			<h1 class="text-6xl font-bold">
 				About
-			</h1>
-			
+			</h1>		
 		</div>
+		<!-- About left contents -->
+		<div> 
 
+		</div>
 		<!-- About right illustration -->
 		<div class="">
 			

@@ -1,11 +1,11 @@
 <template>
+    <!-- Projects grid title -->
+    <div class="text-left ml-36">
+                <h1 class="text-6xl font-bold">Projects</h1>
+            </div>
     <div class="container mx-auto">
         <!-- Projects grid -->
-        <section class="pt-5 sm:pt-5">
-            <!-- Projects grid title -->
-            <div class="text-center">
-                <h1 class="text-4xl font-bold">Projects</h1>
-            </div>
+        <section class="pt-5 sm:pt-5">           
             <!-- Projects grid -->
             <div class="filter mt-4">
                 <!--Filter and search projects-->
@@ -28,7 +28,7 @@
                                     class="block shadow-lg cursor-pointer mb-2"
                                     aria-label="">
                                     <div>
-                                        <img class="" />
+                                        <img class="rounded-t-xl border-none" src="../../assets/sampleProject.svg"/>
                                     </div>
                                     <div class="text-center px-4 py-6">
                                         <p class="font-bold text-xl text-dark mb-2">{{ item.title }}</p>
