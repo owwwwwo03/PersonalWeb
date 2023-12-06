@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 
 import App from './App.vue';
+
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 //import axiosPlugin from './lib/xhr'
@@ -11,6 +12,7 @@ import './css/index';
 //import 'bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import i18n from './config/i18n';
+import 'aos/dist/aos.css';
 
 const app = createApp(App);
 
@@ -19,5 +21,6 @@ app.use(LoadingPlugin);
 app.use(router);
 app.use(store);
 app.use(i18n);
+
 
 app.mount("#app");
