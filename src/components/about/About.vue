@@ -21,7 +21,7 @@
 		</div>
 		<!-- About right contents -->
 		<div class="w-full sm:w-3/4 text-left">
-
+			
 		</div>
 	</section>
 </template>
