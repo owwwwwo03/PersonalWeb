@@ -45,7 +45,7 @@ const projects = [
         skill:['3D','Arduino'],
         url: '/projects/kick',
     },
-
-
 ];
+
+
 export default projects;

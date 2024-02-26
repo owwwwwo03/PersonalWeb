@@ -32,7 +32,8 @@
                                         <p class="font-bold text-xl text-dark mb-2">{{ item.title }}</p>
                                         <p class="font-medium text-lg text-dark">{{ item.category }}</p>
                                         <p v-for="skill in item.skill" :key="skill"
-                                            class="inline-block bg-black text-white rounded p-2 m-1"
+                                            :style="{ backgroundColor: getSkillColor(skill) }"
+                                            class="inline-block bg-black text-white rounded-full py-2 px-4 m-1"
                                            >
                                             {{ skill }}
                                         </p>
@@ -50,6 +51,12 @@
 
 <script lang="ts" setup>
 import useProjectData from '../../data/projects';
+import useSkillColorsData from '../../data/skillColors';
+
+const getSkillColor = (inputSkill) =>{
+    const matchedSkill = useSkillColorsData.find(item => item.skill === inputSkill);
+    return matchedSkill ? matchedSkill.color : '#666';
+};
 
 
 </script>
