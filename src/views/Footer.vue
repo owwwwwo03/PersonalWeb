@@ -1,14 +1,17 @@
 <template>
-  <div class="container mx-auto">  
-      <div class="flex justify-center">
-        <ul class="list-none flex space-x-4">
-          <li v-for="social in socials" :key="social.id">
-            <a :href="social.url" target="_blank" class="text-500 hover:text-blue-700">
-              {{ social.name }}
-            </a>
-          </li>
-        </ul>
+  <div class="container mx-auto">
+    <div style="height: 50px;"></div>  
+      <div class="flex justify-center custom-font">
+          <ul class="list-none flex space-x-16">
+            <li v-for="social in socials" :key="social.id">
+              <img :src="social.image" width="30" style="display: inline-block;" class="mr-2">
+              <a :href="social.url" target="_blank" style="display: inline-block;">
+                {{ social.name }}
+              </a>
+            </li>           
+        </ul>     
       </div>
+      <div style="height: 20px;"></div>
   </div>
 </template>
   
@@ -23,16 +26,19 @@ const socials = reactive([
     id: 2,
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/yi-xiang-su-898396169/',
+    image: '../src/assets/LinkedinLogo.svg'
   },
   {
     id: 3,
     name: 'GitHub',
     url: 'https://github.com/owwwwwo03',
+    image: '../src/assets/GithubLogo.svg'
   },
   {
     id: 4,
     name: 'Instagram',
     url: 'https://instagram.com',
+    image: '../src/assets/InstagramLogo.svg'
   },
 ]);
 
@@ -50,6 +56,8 @@ onUpdated(() => {
 <style>
 .custom-font {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: height; 
 }
 </style>
   

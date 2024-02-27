@@ -104,6 +104,8 @@ onUpdated(() => {
 
 .custom-font {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold; 
 }
 
 #nav a.router-link-exact-active {

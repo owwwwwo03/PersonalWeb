@@ -30,7 +30,10 @@
                                     </div>
                                     <div class="text-center px-4 py-6">
                                         <p class="font-bold text-xl text-dark mb-2">{{ item.title }}</p>
-                                        <p class="font-medium text-lg text-dark">{{ item.category }}</p>
+                                        <p v-for="category in item.category" :key="category"
+                                        class="inline-block bg-black text-white rounded-full py-2 px-4 m-1"
+                                        >
+                                        {{ category }}</p>
                                         <p v-for="skill in item.skill" :key="skill"
                                             :style="{ backgroundColor: getSkillColor(skill) }"
                                             class="inline-block bg-black text-white rounded-full py-2 px-4 m-1"
@@ -57,6 +60,7 @@ const getSkillColor = (inputSkill) =>{
     const matchedSkill = useSkillColorsData.find(item => item.skill === inputSkill);
     return matchedSkill ? matchedSkill.color : '#666';
 };
+
 
 
 </script>
