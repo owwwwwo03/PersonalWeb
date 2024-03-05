@@ -1,5 +1,7 @@
 {
     "project-title": "Projects",
     "about-title": "About",
-    "contact-title": "Contact"
+    "contact-title": "Contact",
+    "about-content-title":[""],
+    "about-content-context":[""]
 }
