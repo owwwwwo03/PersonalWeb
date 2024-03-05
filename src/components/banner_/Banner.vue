@@ -11,10 +11,10 @@
 			</ul>
 			
 			<a href="javascript:;" class="carousel-btn prev">
-				<i data-feather="chevron-left"></i>
+				<i class="custom-chevron-left" data-feather="chevron-left"></i>
 			</a>
 			<a href="javascript:;" class="carousel-btn next">
-				<i data-feather="chevron-right"></i>
+				<i class="custom-chevron-right" data-feather="chevron-right"></i>
 			</a>
 			
 			<div class="carousel-indicator">
@@ -106,10 +106,10 @@ onUpdated(() => {
       opacity: 0;
       transition: all 0.5s;
       &.prev{
-        left: 20px;
+        left: 50px;
       }
       &.next{
-        right: 20px;
+        right: 50px;
       }
     }
   }
@@ -118,6 +118,13 @@ onUpdated(() => {
       opacity: 1;
     }
   }
+}
+.custom-chevron-left {
+  transform: translate(8px,10px);
+}
+
+.custom-chevron-right {
+  transform: translate(10px,10px); 
 }
 
 </style>

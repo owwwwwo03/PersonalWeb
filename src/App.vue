@@ -3,9 +3,13 @@
     <!-- App header -->
     <Header></Header>
     <!-- Render active component contents with vue transition -->
-    <transition name="fade" mode="out-in">
-      <router-view :theme="appTheme"/>
-    </transition>
+    
+    <!--<router-view :theme="appTheme"/>-->
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>    
+    </router-view>
     <!-- Scroll to top -->
     <button @click="topFunction()" class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
       <i data-feather="chevron-up"></i>

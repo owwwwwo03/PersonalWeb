@@ -1,5 +1,5 @@
 <template>
-	<Banner class="mb-5 mb-sm-8" />
+	<!--<Banner class="mb-5 mb-sm-8" />-->
   <About class="mb-5 mb-sm-8"/>
   <Projects class="mb-5 mb-sm-8" />
   <Contact class="mb-5 mb-sm-8"/>
