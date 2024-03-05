@@ -1,7 +1,7 @@
 <template>
 	<div class="text-left ml-36">
 		<h1 class="text-6xl font-bold">
-			About
+			{{$t("about-title")}}
 		</h1>
 		<section class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
 			<!-- About left contents -->
@@ -18,7 +18,19 @@
 				</div>
 			</div>
 			<!-- About right contents -->
-			<div class="w-full sm:w-3/4 text-left">	
+			<div class="w-full sm:w-3/4 text-left max-w-4xl">
+				<p class="text-2xl font-bold mb-4">ABOUT ME</p>
+				<p class="text-lg mb-2">
+					I am SU YI XIANG, currently working as an engineer in the Digital Experience Development Department at AUO Company. 
+					My expertise lies HCI, VR/AR development, and front-end interface design and implementation. 
+					I aspire to maintain an open and creative mindset in my design work, continuously learn new knowledge, and deepen my skills. 
+					I strive to objectively analyze data and technological trends, implement solutions, and ensure execution efficiency to face various unknowns and challenges in life.
+				</p>
+				<p class="text-2xl font-bold mb-4">EDUCATION</p>
+				<p class="text-lg mb-2">Bachelor's Degree in Computer Science, University of XYZ, Graduated 20XX</p>
+				<p class="text-2xl font-bold mb-4">EXPERIENCE</p>
+				<p class="text-lg mb-2">Software Engineer at ABC Company, 20XX-20XX</p>
+				<p class="text-lg mb-2">Project Manager at DEF Corporation, 20XX-Present</p>
 			</div>
 		</section>
 	</div>

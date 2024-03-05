@@ -2,7 +2,7 @@
 	<section class="pt-5 sm:pt-5">
 		<div class="text-left ml-36">
 			<h1 class="text-6xl font-bold">
-				Contact
+				{{$t("contact-title")}}
 			</h1>
 			<div class="w-full sm:w-1/4 mb-7 sm:mb-0 ml-36">
 				<div class="input-section">
@@ -30,7 +30,7 @@
 	</section>
 </template>
   
-<script lang="ts">
+<script lang="ts" setup>
 
 </script>
   

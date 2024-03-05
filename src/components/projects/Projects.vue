@@ -1,7 +1,7 @@
 <template>
     <!-- Projects grid title -->
     <div class="text-left ml-36">
-        <h1 class="text-6xl font-bold">Projects</h1>
+        <h1 class="text-6xl font-bold">{{$t("project-title")}}</h1>
         <div class="container mx-auto">
             <!-- Projects grid -->
             <section class="pt-5 sm:pt-5">
@@ -18,7 +18,6 @@
 
                     </div>
                     <!-- Project Gallery -->
-
                     <div class="container mx-auto">
                         <div class="flex justify-center">
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
