@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import About from '../components/about/About.vue';
-import Projects from '../components/projects/Projects.vue';
-import Contact from '../components/contact/Contact.vue'
-import FabAR from '../components/projects/contents/FabAR.vue';
-import Doddle from '../components/projects/contents/Doddle.vue';
-import MetaHuman from '../components/projects/contents/MetaHuman.vue';
-import VBike from '../components/projects/contents/VBike.vue';
-import Kuchipa from '../components/projects/contents/Kuchipa.vue';
-import Kick from '../components/projects/contents/Kick.vue';
+import Home from '@/views/Home.vue';
+import About from '@/components/about/About.vue';
+import Projects from '@/components/projects/Projects.vue';
+import Contact from '@/components/contact/Contact.vue'
+import FabAR from '@/components/projects/contents/FabAR.vue';
+import Doddle from '@/components/projects/contents/Doddle.vue';
+import MetaHuman from '@/components/projects/contents/MetaHuman.vue';
+import VBike from '@/components/projects/contents/VBike.vue';
+import Kuchipa from '@/components/projects/contents/Kuchipa.vue';
+import Kick from '@/components/projects/contents/Kick.vue';
 
 const routes = [
      {

@@ -66,13 +66,11 @@
 
 <script lang="ts" setup>
 import feather from 'feather-icons';
-import { useStore } from 'vuex';
 import { CheckIcon } from '@heroicons/vue/24/solid';
-import { onMounted, ref, reactive, onUpdated } from 'vue';
+import { onMounted, ref, onUpdated } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 
-const store = useStore();
 const { locale } = useI18n();
 
 const isLangsHidden = ref(true);

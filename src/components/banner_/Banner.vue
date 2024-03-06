@@ -31,7 +31,7 @@
 
 <script lang="ts" setup>
 import feather from 'feather-icons';
-import { onMounted, reactive, onUpdated } from 'vue';
+import { onMounted, onUpdated } from 'vue';
 onMounted(() => {
 	feather.replace();
 });

@@ -1,5 +1,5 @@
 <template>
-  <div :class="appTheme">
+  <div>
     <!-- App header -->
     <Header></Header>
     <!-- Render active component contents with vue transition -->
@@ -21,13 +21,11 @@
 
 <script lang="ts" setup>
 
-import Header from './views/Header.vue';
-import Footer from './views/Footer.vue';
-import { useStore } from 'vuex';
-import { ref, onMounted, onUpdated } from 'vue';
+import Header from '@/views/Header.vue';
+import Footer from '@/views/Footer.vue';
+import { onMounted, onUpdated } from 'vue';
 import feather from 'feather-icons';
 
-const store = useStore();
 
 const topFunction = () =>{
   document.body.scrollTop =0;

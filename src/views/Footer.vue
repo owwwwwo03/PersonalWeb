@@ -17,9 +17,7 @@
   
 <script lang="ts" setup>
 import feather from 'feather-icons';
-import { useStore } from 'vuex';
 import { onMounted, reactive, onUpdated } from 'vue';
-const store = useStore();
 
 const socials = reactive([
   {
