@@ -74,9 +74,10 @@ import { useI18n } from 'vue-i18n';
 const { locale } = useI18n();
 
 const isLangsHidden = ref(true);
-const selectedLanguage = ref("zh-TW");
+const selectedLanguage = ref(localStorage.getItem('selectedLanguage') || "zh-TW");
 
 const changeLanguage = (lang) => {
+  localStorage.setItem('selectedLanguage', lang);
   locale.value = lang;
   selectedLanguage.value = lang;
   isLangsHidden.value = true;

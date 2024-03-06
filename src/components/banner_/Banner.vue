@@ -5,7 +5,7 @@
 			<ul class="carousel-body flex">
 				<li class="carousel-item fade">
 					<RouterLink to="/" class="block">
-						<img src="" class="w-full">
+						<img src="../../assets/sampleBanner01.svg" class="w-full">
 					</RouterLink>
 				</li>
 			</ul>
@@ -45,8 +45,8 @@ onUpdated(() => {
 .projects-carousel{
   width: 100%;
   height: 100%;
-  min-width: 300px;
-  min-height: 150px;
+  min-width: 1080px;
+  min-height: 500px;
   position: relative;
   .carousel{
     &-body {
