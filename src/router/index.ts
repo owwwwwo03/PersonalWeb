@@ -17,6 +17,11 @@ const routes = [
           name: 'home'
      },
      {
+          path: '/',
+          component: Home,
+          name: 'Home'
+     },
+     {
           path: '/PersonalWeb/projects',
           component: Projects,
           name: 'Projects'

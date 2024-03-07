@@ -5,16 +5,16 @@
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header logos -->
       <div class="flex justify-between items-center px-4 sm:px-0">
-        <a href="/" class="custom-font">Home</a>
+        <a href="/PersonalWeb/" class="custom-font">Home</a>
       </div>
 
       <!-- Header links -->
       <div class="container-fluid">
         <div class="custom-font">
           <ul class="flex space-x-4">
-            <a href="/projects" class="nav-link">{{$t("project-title")}}</a>
-            <a href="/about" class="nav-link">{{$t("about-title")}}</a>
-            <a href="/contact" class="nav-link">{{$t("contact-title")}}</a>
+            <a href="/PersonalWeb/projects" class="nav-link">{{$t("project-title")}}</a>
+            <a href="/PersonalWeb/about" class="nav-link">{{$t("about-title")}}</a>
+            <a href="/PersonalWeb/contact" class="nav-link">{{$t("contact-title")}}</a>
           </ul>
         </div>
       </div>

@@ -27,10 +27,10 @@
 					I strive to objectively analyze data and technological trends, implement solutions, and ensure execution efficiency to face various unknowns and challenges in life.
 				</p>
 				<p class="text-2xl font-bold mb-4">EDUCATION</p>
-				<p class="text-lg mb-2">Bachelor's Degree in Computer Science, University of XYZ, Graduated 20XX</p>
+				<p class="text-lg mb-2">National Cheng Kung University Master’s degree, Graduated 2022</p>
 				<p class="text-2xl font-bold mb-4">EXPERIENCE</p>
-				<p class="text-lg mb-2">Software Engineer at ABC Company, 20XX-20XX</p>
-				<p class="text-lg mb-2">Project Manager at DEF Corporation, 20XX-Present</p>
+				<p class="text-lg mb-2">Software Engineer at AUO Company, Mar 2022 - Present</p>
+				<p class="text-lg mb-2">Project Research Assistant at National Cheng Kung University, Sep 2020 - Jun 2021</p>
 			</div>
 		</section>
 	</div>

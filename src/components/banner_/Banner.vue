@@ -5,7 +5,10 @@
 			<ul class="carousel-body flex">
 				<li class="carousel-item fade">
 					<RouterLink to="/" class="block">
-						<img src="../../assets/sample_banner01.svg" class="w-full">
+            <div class="flex justify-center items-center">          
+              <img src="../../assets/sample_banner01.svg" class="w-full">  
+              <p class="custom-font">Continuously updating</p>
+            </div>   
 					</RouterLink>
 				</li>
 			</ul>

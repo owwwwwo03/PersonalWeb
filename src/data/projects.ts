@@ -7,35 +7,35 @@ const projects = [
 		title: 'FabAR',
 		category: ['MR'],
         skill:['Unity','Hololens','MRTK'],
-        url: '/projects/fabAR',
+        url: '/PersonalWeb/projects/fabAR',
     },
     {
         id: 2,
 		title: 'Doddle',
 		category: ['HCI','AI'],
         skill:['Unity','Stable Diffusion','UIUX'],
-        url: '/projects/doddle',
+        url: '/PersonalWeb/projects/doddle',
     },
     {
         id: 3,
 		title: 'MetaHuman',
 		category: ['HCI'],
         skill:['Web','Unreal','Azure'],
-        url: '/projects/metaHuman',
+        url: '/PersonalWeb/projects/metaHuman',
     },
     {
         id: 4,
 		title: 'VBike',
 		category: ['VR'],
         skill:['Unity','GLSL/HLSL','HCI','UIUX','Arduino'],
-        url: '/projects/vBike',
+        url: '/PersonalWeb/projects/vBike',
     },
     {
         id: 5,
 		title: 'Kuchipa',
 		category: ['HCI'],
         skill:['Unity','Mediapipe','OpenCV'],
-        url: '/projects/kuchipa',
+        url: '/PersonalWeb/projects/kuchipa',
     },
     
     {
@@ -43,7 +43,7 @@ const projects = [
 		title: 'Kick',
 		category: ['Product Design'],
         skill:['3D','Arduino'],
-        url: '/projects/kick',
+        url: '/PersonalWeb/projects/kick',
     },
 ];
 
