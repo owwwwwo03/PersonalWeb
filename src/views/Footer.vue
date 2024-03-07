@@ -18,6 +18,9 @@
 <script lang="ts" setup>
 import feather from 'feather-icons';
 import { onMounted, reactive, onUpdated } from 'vue';
+import linkedin_logo from '@/assets/linkedin_logo.svg';
+import github_logo from '@/assets/github_logo.svg';
+import instagram_logo from '@/assets/instagram_logo.svg';
 
 const socials = reactive([
   {
