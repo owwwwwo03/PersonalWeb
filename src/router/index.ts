@@ -12,52 +12,52 @@ import Kick from '@/components/projects/contents/Kick.vue';
 
 const routes = [
      {
-          path: '/',
+          path: '/PersonalWeb/',
           component: Home,
           name: 'home'
      },
      {
-          path: '/projects',
+          path: '/PersonalWeb/projects',
           component: Projects,
           name: 'Projects'
      },
      {
-          path: '/about',
+          path: '/PersonalWeb/about',
           component: About,
           name: 'About'
      },
      {
-          path: '/contact',
+          path: '/PersonalWeb/contact',
           component: Contact,
           name: 'Contact'
      },
      {
-          path: '/projects/fabAR',
+          path: '/PersonalWeb/projects/fabAR',
           component: FabAR,
           name: 'FabAR'
      },
      {
-          path: '/projects/doddle',
+          path: '/PersonalWeb/projects/doddle',
           component: Doddle,
           name: 'Doddle'
      },
      {
-          path: '/projects/metaHuman',
+          path: '/PersonalWeb/projects/metaHuman',
           component: MetaHuman,
           name: 'MetaHuman'
      },
      {
-          path: '/projects/vBike',
+          path: '/PersonalWeb/projects/vBike',
           component: VBike,
           name: 'VBike'
      },
      {
-          path: '/projects/kuchipa',
+          path: '/PersonalWeb/projects/kuchipa',
           component: Kuchipa,
           name: 'Kuchipa'
      },
      {
-          path: '/projects/kick',
+          path: '/PersonalWeb/projects/kick',
           component: Kick,
           name: 'Kick'
      },

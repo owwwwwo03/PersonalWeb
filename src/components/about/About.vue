@@ -7,7 +7,7 @@
 			<!-- About left contents -->
 			<div class="w-full sm:w-1/4 mb-7 sm:mb-0 ml-36">
 				<div>
-					<img class="border-none" src="../../assets/sampleProfile.svg" />
+					<img class="border-none" src="../../assets/sample_profile.svg" />
 				</div>
 				<div class="flex justify-center sm:block mb-10">
 					<a download="SeanYXSu Resume English.pdf" href="../../assets/files/ResumeEnglish.pdf"

@@ -25,7 +25,7 @@
                                     <router-link :to="item.url" class="block cursor-pointer mb-2" aria-label="">
                                         <div class="flex flex-col items-center">
                                             <div>
-                                                <img class="border-none" src="../../assets/sampleProject.svg" />
+                                                <img class="border-none" src="../../assets/sample_project.svg" />
                                             </div>
                                             <div class="text-center px-4 py-6">
                                                 <p class="font-bold text-xl text-dark mb-2">{{ item.title }}</p>

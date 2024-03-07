@@ -9,5 +9,7 @@ export default defineConfig({
     alias:{
       "@":path.resolve(__dirname,"./src"),
     }
-  }
+  },
+  // publicPath 為 project-name，根目錄地址為上傳的網域
+  base: '/PersonalWeb/'
 })

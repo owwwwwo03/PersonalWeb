@@ -24,19 +24,19 @@ const socials = reactive([
     id: 2,
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/yi-xiang-su-898396169/',
-    image: '../src/assets/LinkedinLogo.svg'
+    image: '../src/assets/linkedin_logo.svg'
   },
   {
     id: 3,
     name: 'GitHub',
     url: 'https://github.com/owwwwwo03',
-    image: '../src/assets/GithubLogo.svg'
+    image: '../src/assets/github_logo.svg'
   },
   {
     id: 4,
     name: 'Instagram',
     url: 'https://instagram.com',
-    image: '../src/assets/InstagramLogo.svg'
+    image: '../src/assets/instagram_logo.svg'
   },
 ]);
 

@@ -5,7 +5,7 @@
 			<ul class="carousel-body flex">
 				<li class="carousel-item fade">
 					<RouterLink to="/" class="block">
-						<img src="../../assets/sampleBanner01.svg" class="w-full">
+						<img src="../../assets/sample_banner01.svg" class="w-full">
 					</RouterLink>
 				</li>
 			</ul>
