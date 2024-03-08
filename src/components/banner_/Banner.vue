@@ -4,7 +4,7 @@
 		<div class='my-carousel' @mouseenter="stop" @mouseleave="start">
       <Transition name="fade">
         <ul class="carousel-body flex">
-          <li v-for="(item,i) in props.findBannerList" :key="item.id" class="carousel-item">
+          <li v-for="(item) in props.findBannerList" :key="item.id" class="carousel-item">
             <RouterLink to="/PersonalWeb/projects" class="block">
               <div class="screen-image">          
                 <img :src="item.imgUrl">  
@@ -21,7 +21,7 @@
 				<i class="custom-chevron-right" data-feather="chevron-right"></i>
 			</a>	
 			<div class="carousel-indicator">
-				<span @click="active(i)" v-for="(item, i) in props.findBannerList" :key="i" :class="{ active: index === i }"></span>
+				<span @click="active(i)" v-for="(i) in props.findBannerList" :key="i" :class="{ active: index === i }"></span>
 			</div>
 		</div>
 	</section>
