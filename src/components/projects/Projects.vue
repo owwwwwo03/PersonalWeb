@@ -1,10 +1,10 @@
 <template>
     <!-- Projects grid title -->
-    <div class="text-left ml-36">
+    <div class="text-left ml-18">
         <h1 class="text-6xl font-bold">{{$t("project-title")}}</h1>
         <div class="container mx-auto">
             <!-- Projects grid -->
-            <section class="pt-5 sm:pt-5">
+            <section class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
                 <!-- Projects grid -->
                 <div class="filter mt-4">
                     <!--Filter and search projects-->

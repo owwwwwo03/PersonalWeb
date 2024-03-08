@@ -1,10 +1,10 @@
 <template>
 	<section class="pt-5 sm:pt-5">
-		<div class="text-left ml-36">
+		<div class="text-left ml-18">
 			<h1 class="text-6xl font-bold">
 				{{$t("contact-title")}}
 			</h1>
-			<div class="w-full sm:w-1/4 mb-7 sm:mb-0 ml-36">
+			<div class="w-full sm:w-2/4 mb-7 sm:mb-0">
 				<div class="input-section">
 					<div class="hover-text">
 						<input type="text" placeholder="Name" />
@@ -24,7 +24,7 @@
 		</div>
 
 
-		<div class="w-full sm:w-3/4 text-left">
+		<div class="w-full sm:w-2/4 text-left">
 
 		</div>
 	</section>

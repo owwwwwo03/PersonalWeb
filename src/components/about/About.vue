@@ -1,11 +1,11 @@
 <template>
-	<div class="text-left ml-36">
+	<div class="text-left ml-18">
 		<h1 class="text-6xl font-bold">
 			{{$t("about-title")}}
 		</h1>
 		<section class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
 			<!-- About left contents -->
-			<div class="w-full sm:w-1/4 mb-7 sm:mb-0 ml-36">
+			<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<div>
 					<img class="border-none" src="../../assets/sample_profile.svg" />
 				</div>
@@ -18,7 +18,7 @@
 				</div>
 			</div>
 			<!-- About right contents -->
-			<div class="w-full sm:w-3/4 text-left max-w-4xl">
+			<div class="w-full sm:w-3/4 text-left max-w-4xl ml-4">
 				<p class="text-2xl font-bold mb-4">ABOUT ME</p>
 				<p class="text-lg mb-2">
 					I am SU YI XIANG, currently working as an engineer in the Digital Experience Development Department at AUO Company. 

@@ -1,9 +1,9 @@
 <template>
-	<Banner class="mb-5 mb-sm-8" />
-  <About class="mb-5 mb-sm-8"/>
-  <Projects class="mb-5 mb-sm-8" />
-  <Contact class="mb-5 mb-sm-8"/>
+  <Banner class="mb-5 mb-sm-8" />
 	<div class="container mx-auto">
+    <About class="mb-5 mb-sm-8"/>
+    <Projects class="mb-5 mb-sm-8" />
+    <Contact class="mb-5 mb-sm-8"/>
   </div>	
     
 </template>
