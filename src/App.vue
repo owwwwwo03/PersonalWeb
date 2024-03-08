@@ -3,11 +3,12 @@
     <!-- App header -->
     <Header></Header>
     <!-- Render active component contents with vue transition -->
-    
     <!--<router-view :theme="appTheme"/>-->
     <router-view v-slot="{ Component }">
       <transition name="fade" mode="out-in">
-        <component :is="Component" />
+        <div>
+          <component :is="Component"></component>
+        </div>        
       </transition>    
     </router-view>
     <!-- Scroll to top -->

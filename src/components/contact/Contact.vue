@@ -1,33 +1,36 @@
 <template>
-	<section class="pt-5 sm:pt-5">
-		<div class="text-left ml-18">
-			<h1 class="text-6xl font-bold">
-				{{$t("contact-title")}}
-			</h1>
-			<div class="w-full sm:w-2/4 mb-7 sm:mb-0">
-				<div class="input-section">
-					<div class="hover-text">
-						<input type="text" placeholder="Name" />
+	<div class="container mx-auto">
+		<section class="pt-5 sm:pt-5">
+			<div class="text-left ml-18">
+				<h1 class="text-6xl font-bold">
+					{{$t("contact-title")}}
+				</h1>
+				<div class="w-full sm:w-2/4 mb-7 sm:mb-0">
+					<div class="input-section">
+						<div class="hover-text">
+							<input type="text" placeholder="Name" />
+						</div>
+						<div class="hover-text">
+							<input type="text" placeholder="Email" />
+						</div>
+						<div class="hover-text">
+							<textarea placeholder="Message"></textarea>
+						</div>
 					</div>
-					<div class="hover-text">
-						<input type="text" placeholder="Email" />
-					</div>
-					<div class="hover-text">
-						<textarea placeholder="Message"></textarea>
+					<div class="button-section">
+						<button type="submit" class="btn-default">Submit</button>
 					</div>
 				</div>
-				<div class="button-section">
-					<button type="submit" class="btn-default">Submit</button>
-				</div>
+
 			</div>
 
-		</div>
 
+			<div class="w-full sm:w-2/4 text-left">
 
-		<div class="w-full sm:w-2/4 text-left">
-
-		</div>
-	</section>
+			</div>
+		</section>
+	</div>
+	
 </template>
   
 <script lang="ts" setup>

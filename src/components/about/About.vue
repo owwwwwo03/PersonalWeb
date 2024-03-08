@@ -1,5 +1,6 @@
 <template>
-	<div class="text-left ml-18">
+	<div class="container mx-auto">
+		<div class="text-left ml-18">
 		<h1 class="text-6xl font-bold">
 			{{$t("about-title")}}
 		</h1>
@@ -34,6 +35,8 @@
 			</div>
 		</section>
 	</div>
+	</div>
+	
 	
 </template>
   

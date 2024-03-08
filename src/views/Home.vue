@@ -1,5 +1,7 @@
 <template>
-  <Banner class="mb-5 mb-sm-8" />
+  <div>
+    <Banner class="mb-5 mb-sm-8" />
+  </div>
 	<div class="container mx-auto">
     <About class="mb-5 mb-sm-8"/>
     <Projects class="mb-5 mb-sm-8" />
