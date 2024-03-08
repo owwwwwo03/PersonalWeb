@@ -1,40 +1,114 @@
 <template>
 	<section class="pt-5 sm:pt-5">
-		<!-- Banner left contents -->
-		<div class='projects-carousel'>
-			<ul class="carousel-body flex">
-				<li class="carousel-item fade">
-					<RouterLink to="/" class="block">
-            <div class="flex justify-center items-center">          
-              <img src="../../assets/sample_banner01.svg" class="w-full">  
-              <p class="custom-font">Continuously updating</p>
-            </div>   
-					</RouterLink>
-				</li>
-			</ul>
+		<!-- Banner contents -->
+		<div class='my-carousel' @mouseenter="stop" @mouseleave="start">
+      <Transition name="fade">
+        <ul class="carousel-body flex">
+          <li v-for="(item,i) in props.findBannerList" :key="item.id" class="carousel-item">
+            <RouterLink to="/PersonalWeb/projects" class="block">
+              <div class="screen-image">          
+                <img :src="item.imgUrl">  
+              </div>   
+            </RouterLink>
+          </li>
+        </ul>
+      </Transition>		
 			
-			<a href="javascript:;" class="carousel-btn prev">
+			<a @click="clickFn(-1)" href="javascript:;" class="carousel-btn prev">
 				<i class="custom-chevron-left" data-feather="chevron-left"></i>
 			</a>
-			<a href="javascript:;" class="carousel-btn next">
+			<a @click="clickFn(1)" href="javascript:;" class="carousel-btn next">
 				<i class="custom-chevron-right" data-feather="chevron-right"></i>
-			</a>
-			
+			</a>	
 			<div class="carousel-indicator">
-				<span v-for="i in 5" :key="i"></span>
+				<span @click="active(i)" v-for="(item, i) in props.findBannerList" :key="i" :class="{ active: index === i }"></span>
 			</div>
-		</div>
-
-		<!-- Banner right illustration -->
-		<div class="">
-
 		</div>
 	</section>
 </template>
 
 <script lang="ts" setup>
 import feather from 'feather-icons';
-import { onMounted, onUpdated } from 'vue';
+import { onMounted, ref, watch, onUpdated, onUnmounted } from 'vue';
+import banner_picture01 from '@/assets/banner_picture01.svg';
+import banner_picture02 from '@/assets/banner_picture02.svg';
+
+interface Props {
+    findBannerList: Array<any>;
+    autoplay: boolean;
+    duration: number;
+  }
+
+  const props: Props = {
+    findBannerList: [
+      {
+        id:1,
+        imgUrl:banner_picture01
+      },
+      {
+        id:2,
+        imgUrl:banner_picture02
+      },
+      {
+        id:3,
+        imgUrl:banner_picture02
+      }
+    ],
+    autoplay: true,
+    duration: 3
+  }
+
+  const index = ref(0)
+  const timer = ref<number | null>(null)
+
+  const autoplayFn = () => {
+    if (timer.value !== null) clearInterval(timer.value)
+    timer.value = setInterval(() => {
+      index.value += 1
+      if (index.value >= props.findBannerList.length) {
+        index.value = 0
+      }
+    }, props.duration * 1000)as unknown as number
+  }
+
+  watch(
+    () => props.findBannerList,
+    () => {
+      if (props.findBannerList.length > 1 && props.autoplay) {
+        autoplayFn()
+      }
+    }
+  )
+  //滑鼠移入輪播圖，停止自動播放
+  const stop = () => {
+    if (timer.value !== null) clearInterval(timer.value)
+  }
+  //滑鼠移出輪播圖，開啟計時器
+  const start = () => {
+    if (props.findBannerList.length > 1 && props.autoplay) {
+      autoplayFn()
+    }
+  }
+  // 點擊輪播圖上的左右按鈕，切換輪播圖
+  const clickFn = (e: number) => {
+    index.value += e
+    if (index.value >= props.findBannerList.length) {
+      index.value = 0
+    }
+    if (index.value < 0) {
+      index.value = props.findBannerList.length - 1
+    }
+  }
+  // 點擊指示器(輪播圖底下的小點)，切換輪播圖
+  const active = (e: number) => {
+    index.value = e
+  }
+  //避免性能損耗
+  onUnmounted(() => {
+    if (timer.value !== null) clearInterval(timer.value)
+  })
+
+
 onMounted(() => {
 	feather.replace();
 });
@@ -45,11 +119,11 @@ onUpdated(() => {
 
 <style lang="scss" scoped>
 
-.projects-carousel{
+.my-carousel{
   width: 100%;
   height: 100%;
-  min-width: 1080px;
-  min-height: 500px;
+  min-width: 300px;
+  min-height: 150px;
   position: relative;
   .carousel{
     &-body {
@@ -59,7 +133,7 @@ onUpdated(() => {
     &-item {
       width: 100%;
       height: 100%;
-      position: absolute;
+      position: relative;
       left: 0;
       top: 0;
       opacity: 0;
@@ -74,9 +148,9 @@ onUpdated(() => {
       }
     }
     &-indicator {
-      position: absolute;
+      position: relative;
       left: 0;
-      bottom: 20px;
+      bottom: 30px;
       z-index: 2;
       width: 100%;
       text-align: center;
@@ -109,10 +183,10 @@ onUpdated(() => {
       opacity: 0;
       transition: all 0.5s;
       &.prev{
-        left: 50px;
+        left: 20px;
       }
       &.next{
-        right: 50px;
+        right: 20px;
       }
     }
   }
@@ -130,4 +204,15 @@ onUpdated(() => {
   transform: translate(10px,10px); 
 }
 
+.screen-image {
+    width: 100vw; /* 占据视口的宽度 */
+    height: 40vh; /* 占据视口的高度 */
+    overflow: hidden; /* 防止图片溢出 */
+}
+
+.screen-image img {
+    width: 100%; /* 图片填充整个容器 */
+    height: 40%; /* 图片填充整个容器 */
+    object-fit: cover; /* 确保图片完全填充容器并保持纵横比 */
+}
 </style>
