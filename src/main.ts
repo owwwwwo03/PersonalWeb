@@ -13,6 +13,8 @@ import './css/index';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import i18n from './config/i18n';
 import 'aos/dist/aos.css';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import 'swiper/css';
 
 const app = createApp(App);
 
@@ -21,6 +23,6 @@ app.use(LoadingPlugin);
 app.use(router);
 app.use(store);
 app.use(i18n);
-
+app.use(VueAwesomeSwiper);
 
 app.mount("#app");
