@@ -57,12 +57,12 @@ const nowIndex = ref(0);
 const swiperDOM = ref(null);
 
 const funLoadEnd = () => {
-    console.log('loading - success');
+    //onsole.log('loading - success');
     // changePage(1, true)
   };
 const funTransitionend = (i) => {
     nowIndex.value = i
-    console.log('当前下标', nowIndex.value)
+    //console.log('当前下标', nowIndex.value)
   };
 const changePage = (i, st = false) => {
     // 如果是跳转到某页
