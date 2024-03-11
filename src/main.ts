@@ -13,7 +13,6 @@ import './css/index';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import i18n from './config/i18n';
 import 'aos/dist/aos.css';
-import Swiper from 'r-swiper';
 
 const app = createApp(App);
 
@@ -22,7 +21,6 @@ app.use(LoadingPlugin);
 app.use(router);
 app.use(store);
 app.use(i18n);
-app.use(Swiper);
 
 
 app.mount("#app");
