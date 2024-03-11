@@ -1,12 +1,28 @@
 <template>
 	<section class="pt-5 sm:pt-5">
-		<!-- Banner contents -->
-		<div class='my-carousel' @mouseenter="stop" @mouseleave="start">
+    <div class="home-style">
+      <!-- Banner contents -->
+      <rSwiper ref="swiperDOM" class="swiper" @loadEnd="funLoadEnd" @transitionend="funTransitionend">
+        <rSlide>
+          <div class="box"></div>
+        </rSlide>
+        <rSlide>
+          <div class="box box2"></div>
+        </rSlide>
+        <rSlide>
+          <div class="box box3"></div>
+        </rSlide>
+      </rSwiper>
+    </div>
+		
+
+    <!--
+      <div class='my-carousel' @mouseenter="stop" @mouseleave="start">
       <Transition name="fade">
         <ul class="carousel-body flex">
-          <li v-for="(item) in props.findBannerList" :key="item.id" class="carousel-item">
+          <li v-for="(item, i) in props.findBannerList" :key="item.id" class="carousel-item">
             <RouterLink to="/PersonalWeb/projects" class="block">
-              <div class="screen-image">          
+              <div>          
                 <img :src="item.imgUrl">  
               </div>   
             </RouterLink>
@@ -21,9 +37,11 @@
 				<i class="custom-chevron-right" data-feather="chevron-right"></i>
 			</a>	
 			<div class="carousel-indicator">
-				<span @click="active(i)" v-for="(i) in props.findBannerList" :key="i" :class="{ active: index === i }"></span>
+				<span @click="active(i)" v-for="(item,i) in props.findBannerList" :key="i" :class="{ active: index === i }"></span>
 			</div>
 		</div>
+    -->
+		
 	</section>
 </template>
 
@@ -32,7 +50,30 @@ import feather from 'feather-icons';
 import { onMounted, ref, watch, onUpdated, onUnmounted } from 'vue';
 import banner_picture01 from '@/assets/banner_picture01.svg';
 import banner_picture02 from '@/assets/banner_picture02.svg';
+import { rSwiper, rSlide } from 'r-swiper';
 
+
+const nowIndex = ref(0);
+const swiperDOM = ref(null);
+
+const funLoadEnd = () => {
+    console.log('loading - success');
+    // changePage(1, true)
+  };
+const funTransitionend = (i) => {
+    nowIndex.value = i
+    console.log('当前下标', nowIndex.value)
+  };
+const changePage = (i, st = false) => {
+    // 如果是跳转到某页
+  if (st) {
+    swiperDOM.value.slideTo(i)
+  }
+  else {
+      i < 0 ? (swiperDOM.value.prev()) : (swiperDOM.value.next())
+    }
+};
+/*
 interface Props {
     findBannerList: Array<any>;
     autoplay: boolean;
@@ -47,10 +88,6 @@ interface Props {
       },
       {
         id:2,
-        imgUrl:banner_picture02
-      },
-      {
-        id:3,
         imgUrl:banner_picture02
       }
     ],
@@ -75,7 +112,7 @@ interface Props {
     () => props.findBannerList,
     () => {
       if (props.findBannerList.length > 1 && props.autoplay) {
-        autoplayFn()
+        autoplayFn();
       }
     }
   )
@@ -107,7 +144,7 @@ interface Props {
   onUnmounted(() => {
     if (timer.value !== null) clearInterval(timer.value)
   })
-
+*/
 
 onMounted(() => {
 	feather.replace();
@@ -215,4 +252,25 @@ onUpdated(() => {
     height: 40%; /* 图片填充整个容器 */
     object-fit: cover; /* 确保图片完全填充容器并保持纵横比 */
 }
+
+.home-style {
+  width: 100vw;
+  height: 40vh;
+
+  .box {
+    width: 100vw;
+    height: 100vh;
+    background: url('@/assets/banner_picture01.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  .box2 {
+    background-image: url('@/assets/banner_picture01.svg')
+  }
+
+  .box3 {
+    background-image: url('@/assets/banner_picture02.svg')
+  }
+}
+
 </style>
