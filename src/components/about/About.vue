@@ -8,7 +8,7 @@
 			<!-- About left contents -->
 			<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<div>
-					<img class="border-none" src="../../assets/sample_profile.svg" />
+					<img class="border-none" src="../../assets/personal_profile.jpg" />
 				</div>
 				<div class="flex justify-center sm:block mb-10">
 					<a download="SeanYXSu Resume English.pdf" href="../../assets/files/ResumeEnglish.pdf"
@@ -20,18 +20,49 @@
 			</div>
 			<!-- About right contents -->
 			<div class="w-full sm:w-3/4 text-left max-w-4xl ml-4">
-				<p class="text-2xl font-bold mb-4">ABOUT ME</p>
-				<p class="text-lg mb-2">
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/aboutme_logo.svg" />
+					<p class="text-2xl font-bold ml-4">ABOUT ME</p>
+				</div>
+				<p class="text-2x1 mb-6 ml-12">
 					I am SU YI XIANG, currently working as an engineer in the Digital Experience Development Department at AUO Company. 
 					My expertise lies HCI, VR/AR development, and front-end interface design and implementation. 
 					I aspire to maintain an open and creative mindset in my design work, continuously learn new knowledge, and deepen my skills. 
 					I strive to objectively analyze data and technological trends, implement solutions, and ensure execution efficiency to face various unknowns and challenges in life.
 				</p>
-				<p class="text-2xl font-bold mb-4">EDUCATION</p>
-				<p class="text-lg mb-2">National Cheng Kung University Master’s degree, Graduated 2022</p>
-				<p class="text-2xl font-bold mb-4">EXPERIENCE</p>
-				<p class="text-lg mb-2">Software Engineer at AUO Company, Mar 2022 - Present</p>
-				<p class="text-lg mb-2">Project Research Assistant at National Cheng Kung University, Sep 2020 - Jun 2021</p>
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/education_logo.svg" />
+					<p class="text-2xl font-bold ml-4">EDUCATION</p>
+				</div>
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/ncku_logo.svg" />
+					<p class="text-2x1 ml-2">National Cheng Kung University Master’s degree , Sep 2019 - Feb 2022</p>
+				</div>
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/ksu_logo.svg" />
+					<p class="text-2x1 ml-2">National Kyushu University Master’s Exchange , Sep 2021 - Jan 2022</p>
+				</div>
+				<div class="flex items-center mb-6">
+					<img class="border-none" src="../../assets/nknu_logo.svg" />
+					<p class="text-2x1 ml-2">National Kaohsiung Normal University Bachelor’s degree , Sep 2016 - Jun 2019</p>
+				</div>
+				
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/experience_logo.svg" />
+					<p class="text-2xl font-bold ml-4">EXPERIENCE</p>
+				</div>
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/auo_logo.svg" />
+					<p class="text-2x1 ml-2">AUO Digital Experience Development Senior Engineer , Mar 2022 - Present</p>
+				</div>
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/ncku_logo.svg" />
+					<p class="text-2x1 ml-2">National Cheng Kung University Project Research Assistant , Sep 2020 - Jun 2021</p>
+				</div>
+				<div class="flex items-center mb-4">
+					<img class="border-none" src="../../assets/25togo_logo.svg" />
+					<p class="text-2x1 ml-2">25TOGO Design Product Design Intern , Jul 2018 - Aug 2018</p>
+				</div>
 			</div>
 		</section>
 	</div>
