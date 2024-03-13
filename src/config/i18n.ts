@@ -7,8 +7,8 @@ type MessageSchema = typeof zh
 
 const i18n = createI18n<[MessageSchema], 'zh-TW' | 'en-US' | 'ja-JP'>({
     legacy: false,
-    locale: localStorage.getItem('selectedLanguage') || 'zh-TW',
-    fallbackLocale: 'zh-TW',
+    locale: localStorage.getItem('selectedLanguage') || 'en-US',
+    fallbackLocale: 'en-US',
     globalInjection: true,
     messages:{
         'zh-TW':zh,

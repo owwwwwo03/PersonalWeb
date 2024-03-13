@@ -12,9 +12,9 @@
       <div class="container-fluid">
         <div class="custom-font">
           <ul class="flex space-x-6">
-            <a href="/PersonalWeb/projects" class="nav-link">{{$t("project-title")}}</a>
-            <a href="/PersonalWeb/about" class="nav-link">{{$t("about-title")}}</a>
-            <a href="/PersonalWeb/contact" class="nav-link">{{$t("contact-title")}}</a>
+            <router-link to="/PersonalWeb/projects" class="nav-link">{{$t("project-title")}}</router-link>
+            <router-link to="/PersonalWeb/about" class="nav-link">{{$t("about-title")}}</router-link>
+            <router-link to="/PersonalWeb/contact" class="nav-link">{{$t("contact-title")}}</router-link>
           </ul>
         </div>
       </div>

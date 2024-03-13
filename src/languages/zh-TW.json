@@ -2,6 +2,7 @@
     "project-title": "專案計畫",
     "about-title": "個人履歷",
     "contact-title": "聯絡資訊",
-    "about-content-title":[""],
-    "about-content-context":[""]
+    "about-content-aboutme":[""],
+    "about-content-education":[""],
+    "about-content-experience":[""]
 }
