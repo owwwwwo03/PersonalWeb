@@ -47,7 +47,7 @@ const navigation = ref({
   prevEl: ".swiper-button-prev",
 });
 
-// 在modules加入要使用的模块
+// 在modules加入要使用的模組
 const modules = [Autoplay, Pagination, Navigation, Scrollbar];
 const prevEl = () => {
   // console.log('上一張' + index + item)
@@ -70,7 +70,7 @@ onUpdated(() => {
 <style lang="scss" scoped>
 .swiper {
   width: 100wh;
-  height: 50vh;
+  height: auto;
   --swiper-theme-color: #fff;
   --swiper-navigation-color: #fff;
   --swiper-navigation-size: 30px;

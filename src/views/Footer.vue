@@ -56,7 +56,7 @@ onUpdated(() => {
   
 <style>
 .custom-font {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 1.2em;
   font-weight: height; 
 }

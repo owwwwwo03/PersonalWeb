@@ -15,6 +15,7 @@ import i18n from './config/i18n';
 import 'aos/dist/aos.css';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import 'swiper/css';
+import './css/fonts.css';
 
 const app = createApp(App);
 

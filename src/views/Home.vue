@@ -2,7 +2,7 @@
   <div>
     <Banner class="mb-16 mb-sm-8" />
   </div>
-	<div class="container mx-auto">
+	<div class="container mx-auto custom-font">
     <About class="mb-5 mb-sm-8"/>
     <Projects class="mb-5 mb-sm-8" />
     <Contact class="mb-5 mb-sm-8"/>
@@ -17,5 +17,7 @@
 </script>
 
 <style scoped>
-  
+  .custom-font {
+  font-family: Inter;
+}
 </style>

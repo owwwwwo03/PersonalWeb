@@ -11,7 +11,7 @@
       <!-- Header links -->
       <div class="container-fluid">
         <div class="custom-font">
-          <ul class="flex space-x-4">
+          <ul class="flex space-x-6">
             <a href="/PersonalWeb/projects" class="nav-link">{{$t("project-title")}}</a>
             <a href="/PersonalWeb/about" class="nav-link">{{$t("about-title")}}</a>
             <a href="/PersonalWeb/contact" class="nav-link">{{$t("contact-title")}}</a>
@@ -102,8 +102,8 @@ onUpdated(() => {
 }
 
 .custom-font {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
+  font-family: Inter, sans-serif;
+  font-size: 1.4em;
   font-weight: bold; 
 }
 
