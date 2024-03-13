@@ -37,7 +37,7 @@ const imageUrl = ref(background_vbike);
     padding: 160px;
     color: white; /* Adjust the color as needed */
     /* Make the font size responsive to the screen size */
-    font-size: calc(5vw + 2vh); /* Adjust the formula as needed */
+    font-size: 10em; /* Adjust the formula as needed */
     text-align: center; /* Center the text horizontally */
 }
 
