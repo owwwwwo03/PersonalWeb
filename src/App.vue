@@ -12,7 +12,7 @@
       </transition>    
     </router-view>
     <!-- Scroll to top -->
-    <button @click="topFunction()" class="btn back-to-top btn-lg" data-bs-toggle="backtotop">
+    <button @click="topFunction()" class="btn back-to-top btn-lg circular-bg" data-bs-toggle="backtotop">
       <i data-feather="chevron-up"></i>
     </button>
     <!-- App footer -->
@@ -74,6 +74,12 @@ onUpdated(() => {
   vertical-align: middle;
 }
 
+.circular-bg {
+  background-color: #fff; 
+  border-radius: 50%; 
+  padding: 12px; 
+  border: none; 
+}
 
 .fade-enter-active {
   animation: coming 0.4s;

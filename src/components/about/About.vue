@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto">
+	<div class="container mx-auto custom-font">
 		<div class="text-left ml-18">
 		<h1 class="text-6xl font-bold">
 			{{$t("about-title")}}
@@ -83,4 +83,9 @@ onUpdated(() => {
 });
 </script>
   
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+.custom-font {
+  font-family: Inter;
+}
+</style>

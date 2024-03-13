@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto custom-font">
         <!-- Projects grid title -->
         <div class="text-left ml-18">
             <h1 class="text-6xl font-bold">{{$t("project-title")}}</h1>
@@ -31,6 +31,7 @@
                                                 <div class="text-center px-4 py-6">
                                                     <p class="font-bold text-xl text-dark mb-2">{{ item.title }}</p>
                                                     <p v-for="category in item.category" :key="category"
+                                                    :style="{backgroundColor: getCategoryColor(category)}"
                                                     class="inline-block bg-black text-white rounded-full py-2 px-4 m-1"
                                                     >
                                                     {{ category }}</p>
@@ -59,14 +60,24 @@
 <script lang="ts" setup>
 import useProjectData from '../../data/projects';
 import useSkillColorsData from '../../data/skillColors';
+import useCategoryColorsData from '../../data/categoryColors';
 
 const getSkillColor = (inputSkill) =>{
     const matchedSkill = useSkillColorsData.find(item => item.skill === inputSkill);
     return matchedSkill ? matchedSkill.color : '#666';
 };
 
+const getCategoryColor = (inputCategory) =>{
+    const matchedCategory = useCategoryColorsData.find(item => item.category === inputCategory);
+    return matchedCategory ? matchedCategory.color : '#666';
+};
 
 
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+
+.custom-font {
+  font-family: Inter;
+}
+</style>

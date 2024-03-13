@@ -20,14 +20,14 @@ const projects = [
         id: 3,
 		title: 'MetaHuman',
 		category: ['HCI'],
-        skill:['Web','Unreal','Azure'],
+        skill:['Unreal','Azure'],
         url: '/PersonalWeb/projects/metaHuman',
     },
     {
         id: 4,
 		title: 'VBike',
-		category: ['VR'],
-        skill:['Unity','GLSL/HLSL','HCI','UIUX','Arduino'],
+		category: ['VR','HCI'],
+        skill:['Unity','GLSL/HLSL','UIUX','Arduino'],
         url: '/PersonalWeb/projects/vBike',
     },
     {

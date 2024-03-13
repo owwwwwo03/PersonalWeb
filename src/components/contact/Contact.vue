@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto">
+	<div class="container mx-auto custom-font">
 		<section class="pt-5 sm:pt-5">
 			<div class="text-left ml-18">
 				<h1 class="text-6xl font-bold">
@@ -38,6 +38,10 @@
 </script>
   
 <style lang="scss" scoped>
+
+.custom-font {
+  font-family: Inter;
+}
 .input-section {
 	margin-top: 113px;
 	display: flex;
