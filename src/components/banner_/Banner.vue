@@ -76,6 +76,7 @@ onUpdated(() => {
   --swiper-navigation-size: 30px;
 }
 
+
 .swiper-slide img {
     width: 100%; /* 图片宽度占据其父元素的100% */
     height: auto; /* 自动调整高度以保持图像比例 */
