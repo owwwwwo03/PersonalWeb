@@ -1,10 +1,10 @@
 <template>
-	<div class="container mx-auto custom-font">
-		<section class="pt-5 sm:pt-5">
-			<div class="text-left ml-18">
-				<h1 class="text-6xl font-bold">
-					{{$t("contact-title")}}
-				</h1>
+	<div class="container mx-auto custom-font">		
+		<div class="text-left ml-18">
+			<h1 class="text-6xl font-bold">
+				{{$t("contact-title")}}
+			</h1>
+			<section class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
 				<div class="w-full sm:w-2/4 mb-7 sm:mb-0">
 					<div class="input-section">
 						<div class="hover-text">
@@ -16,24 +16,31 @@
 						<div class="hover-text">
 							<textarea placeholder="Message"></textarea>
 						</div>
+						</div>
+						<div class="button-section">
+							<button type="submit" class="btn-default">Submit</button>
+						</div>
 					</div>
-					<div class="button-section">
-						<button type="submit" class="btn-default">Submit</button>
-					</div>
+				<div class="w-full sm:w-2/4 text-left max-w-4xl ml-4">
+					<GoogleMap api-key="YOUR_GOOGLE_MAPS_API_KEY" style="width: 100%; height: 500px" :center="center" :zoom="15">
+						<Marker :options="markerOptions" />
+					</GoogleMap>
 				</div>
-
-			</div>
-
-
-			<div class="w-full sm:w-2/4 text-left">
-
-			</div>
-		</section>
+			</section>				
+		</div>
 	</div>
 	
 </template>
   
 <script lang="ts" setup>
+import { defineComponent } from "vue";
+import { GoogleMap, Marker } from "vue3-google-map";
+
+
+const center = { lat: 40.689247, lng: -74.044502 };
+const markerOptions = { position: center, label: "L", title: "LADY LIBERTY" };
+
+defineComponent({ components: { GoogleMap, Marker }, center, markerOptions });
 
 </script>
   
@@ -43,7 +50,7 @@
   font-family: Inter;
 }
 .input-section {
-	margin-top: 113px;
+	margin-top: 0px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -53,7 +60,7 @@
 		background-color: #ffffff;
 		box-shadow: 0px 3px 6px #00000029;
 		border-radius: 28px;
-		height: 48px;
+		height: 60px;
 		width: 100% !important;
 		border-width: 0px;
 		outline: none;
@@ -102,10 +109,10 @@
 }
 
 .button-section {
-	margin-top: 60px;
+	margin-top: 100px;
 
 	button {
-		height: 48px !important;
+		height: 60px !important;
 		width: 100% !important;
 		font-size: 18px !important;
 	}

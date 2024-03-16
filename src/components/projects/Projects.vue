@@ -23,13 +23,13 @@
                             <div class="flex justify-center">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <div class="projectGallery" v-for="item in useProjectData" :key="item.id">
-                                        <router-link :to="item.url" class="block cursor-pointer mb-2" aria-label="">
+                                        <router-link :to="item.url" class="block cursor-pointer mb-4" aria-label="">
                                             <div class="flex flex-col items-center">
                                                 <div>
-                                                    <img class="border-none" src="../../assets/sample_project.svg" />
+                                                    <img class="border-none" :src="item.imgUrl" />
                                                 </div>
-                                                <div class="text-center px-4 py-6">
-                                                    <p class="font-bold text-xl text-dark mb-2">{{ item.title }}</p>
+                                                <div class="text-center px-4 py-6 mr-4">
+                                                    <p class="font-bold text-4xl text-dark mb-4">{{ item.title }}</p>
                                                     <p v-for="category in item.category" :key="category"
                                                     :style="{backgroundColor: getCategoryColor(category)}"
                                                     class="inline-block bg-black text-white rounded-full py-2 px-4 m-1"

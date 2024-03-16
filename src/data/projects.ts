@@ -1,5 +1,7 @@
 // Projects data.
 // Note: Here we are getting data from a ts file, but in a different project I'll be fetching these projects from some srt of APIs.
+import fabAR_svg from '@/assets/projects_fab_ar.svg';
+import kick_svg from '@/assets/projects_kick.svg';
 
 const projects = [
     {
@@ -8,6 +10,7 @@ const projects = [
 		category: ['MR'],
         skill:['Unity','Hololens','MRTK'],
         url: '/PersonalWeb/projects/fabAR',
+        imgUrl:fabAR_svg,
     },
     {
         id: 2,
@@ -15,6 +18,7 @@ const projects = [
 		category: ['HCI','AI'],
         skill:['Unity','Stable Diffusion','UIUX'],
         url: '/PersonalWeb/projects/doddle',
+        imgUrl:fabAR_svg,
     },
     {
         id: 3,
@@ -22,6 +26,7 @@ const projects = [
 		category: ['HCI'],
         skill:['Unreal','Azure'],
         url: '/PersonalWeb/projects/metaHuman',
+        imgUrl:fabAR_svg,
     },
     {
         id: 4,
@@ -29,6 +34,7 @@ const projects = [
 		category: ['VR','HCI'],
         skill:['Unity','GLSL/HLSL','UIUX','Arduino'],
         url: '/PersonalWeb/projects/vBike',
+        imgUrl:fabAR_svg,
     },
     {
         id: 5,
@@ -36,6 +42,7 @@ const projects = [
 		category: ['HCI'],
         skill:['Unity','Mediapipe','OpenCV'],
         url: '/PersonalWeb/projects/kuchipa',
+        imgUrl:fabAR_svg,
     },
     
     {
@@ -44,6 +51,7 @@ const projects = [
 		category: ['Product Design'],
         skill:['3D','Arduino'],
         url: '/PersonalWeb/projects/kick',
+        imgUrl:kick_svg,
     },
 ];
 

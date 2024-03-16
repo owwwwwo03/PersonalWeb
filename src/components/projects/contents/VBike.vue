@@ -39,17 +39,17 @@ const imageUrl = ref(background_vbike);
 }
 .text-overlay { 
     /* Optional: Add some padding to the text */
-    padding: 120px;
+    padding: 150px;
     color: white; /* Adjust the color as needed */
     
 }
 .text-overlay-title { 
-    font-size: 10em; /* Adjust the formula as needed */
+    font-size: 8em; /* Adjust the formula as needed */
     text-align: center; /* Center the text horizontally */
 }
 
 .text-overlay-subtitle { 
-    font-size: 2em; /* Adjust the formula as needed */
+    font-size: 1.5em; /* Adjust the formula as needed */
     text-align: center; /* Center the text horizontally */
 }
 
