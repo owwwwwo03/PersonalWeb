@@ -1,11 +1,13 @@
 <template>
 	<div class="container mx-auto custom-font">		
 		<div class="text-left ml-18">
-			<h1 class="text-6xl font-bold">
+			<h1 class="text-6xl font-bold mb-8">
 				{{$t("contact-title")}}
 			</h1>
-			<section class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
-				<div class="w-full sm:w-2/4 mb-7 sm:mb-0">
+			<p>If you need any further information, please feel free to contact me.</p>	
+			<section class="block sm:flex sm:gap-10 mt-10 sm:mt-10">
+				<div class="w-full sm:w-2/4 mb-7 sm:mb-0">	
+					
 					<div class="input-section">
 						<div class="hover-text">
 							<input type="text" placeholder="Name" />

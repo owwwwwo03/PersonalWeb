@@ -14,6 +14,8 @@ import './css/index';
 import i18n from './config/i18n';
 import 'aos/dist/aos.css';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
+import vue3videoPlay from 'vue3-video-play';
+import 'vue3-video-play/dist/style.css';
 import 'swiper/css';
 import './css/fonts.css';
 
@@ -25,5 +27,6 @@ app.use(router);
 app.use(store);
 app.use(i18n);
 app.use(VueAwesomeSwiper);
+app.use(vue3videoPlay);
 
 app.mount("#app");
