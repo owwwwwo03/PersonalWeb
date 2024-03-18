@@ -42,7 +42,7 @@ const options = reactive({
   volume: 0.3, //默認音量大小
   control: true, //是否顯示控制器
   title: '', //影片名稱
-  src: "https://drive.google.com/file/d/1pCcDcgRr5k0ppBVoLDeeixohM8TOAXec/view?usp=drive_link", //link
+  src: "https://dl.dropboxusercontent.com/scl/fi/b5a1nlewoj30x40m4cdga/ADTD.mp4?rlkey=x2ovift943iiq6u8u6amj32u2&dl=0", //link
   poster: '', //封面
 })
 const onPlay = (ev) => {
