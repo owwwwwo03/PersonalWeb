@@ -10,8 +10,15 @@
                 一邊踩踏一邊欣賞當地360度的景色，讓訓練不單單只是訓練，而是一趟美好的旅程。</p>
         </div>
     </div>
+    <div class="container mx-auto custom-font">
+      <div class="text-left ml-18 mt-10">
+        <h1 class="text-6xl font-bold">
+          Review
+        </h1>
+      </div>
+    </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center ">
-      <div class="flex items-center ">
+      <div class="flex items-center">    
         <videoPlay 
         v-bind="options" 
         @play="onPlay"
@@ -26,11 +33,12 @@
 import { ref, reactive } from 'vue';
 import { videoPlay } from 'vue3-video-play/lib/index.js';
 import background_vbike from '@/assets/background_vbike.svg';
+import video_vbike_post from '@/assets/video_vbike_post.svg';
 const imageUrl = ref(background_vbike);
 
 const options = reactive({
-  width: '800px', //播放器寬度
-  height: '450px', //播放器高度
+  width: '900px', //播放器寬度
+  height: '500px', //播放器高度
   color: "#409eff", //顏色
   muted: false, //靜音
   webFullScreen: false,
@@ -42,8 +50,8 @@ const options = reactive({
   volume: 0.3, //默認音量大小
   control: true, //是否顯示控制器
   title: '', //影片名稱
-  src: "https://dl.dropboxusercontent.com/scl/fi/b5a1nlewoj30x40m4cdga/ADTD.mp4?rlkey=x2ovift943iiq6u8u6amj32u2&dl=0", //link
-  poster: '', //封面
+  src: "https://dl.dropboxusercontent.com/scl/fi/aegujzs3koaona3jll37s/video_vbike.mp4?rlkey=jnloksexp0tqxuus0m5d5iba3&dl=0", //link
+  poster: video_vbike_post, //封面
 })
 const onPlay = (ev) => {
   console.log('Play')
