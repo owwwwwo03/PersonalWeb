@@ -62,7 +62,7 @@ const options = reactive({
   poster: video_vbike_post, //封面
 })
 const onPlay = (ev) => {
-  console.log('Play')
+  console.log(ev, 'Play')
 }
 const onPause = (ev) => {
   console.log(ev, 'Stop')
