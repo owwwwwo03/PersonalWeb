@@ -26,6 +26,12 @@
         @timeupdate="onTimeupdate" 
         @canplay="onCanplay" />
       </div>  
+    </div>
+    <div class="image-container">
+      <img :src=background_vbike alt="Main Image" class="main-image" @mouseover="showOverlay = true" @mouseleave="showOverlay = false">
+      <transition name="fade">
+        <img v-if="showOverlay" :src=video_vbike_post alt="Overlay Image" class="overlay-image">
+      </transition>
   </div>
 </template>
 
@@ -34,6 +40,8 @@ import { ref, reactive } from 'vue';
 import { videoPlay } from 'vue3-video-play/lib/index.js';
 import background_vbike from '@/assets/background_vbike.svg';
 import video_vbike_post from '@/assets/video_vbike_post.svg';
+
+const showOverlay = ref(false);
 const imageUrl = ref(background_vbike);
 
 const options = reactive({
@@ -109,4 +117,32 @@ const onCanplay = (ev) => {
     text-align: center; /* Center the text horizontally */
 }
 
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 1;
+}
 </style>
