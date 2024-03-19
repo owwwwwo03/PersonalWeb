@@ -90,7 +90,7 @@ const onCanplay = (ev) => {
 }
 .text-overlay { 
     /* Optional: Add some padding to the text */
-    padding: 100px;
+    padding: 6%;
     color: white; /* Adjust the color as needed */
     
 }

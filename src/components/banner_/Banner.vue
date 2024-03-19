@@ -84,6 +84,6 @@ onUpdated(() => {
 
 .full-screen {
   width: 100wh;
-  height: 40vh;
+  height: auto;
 }
 </style>

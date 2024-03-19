@@ -1,10 +1,10 @@
 <template>
   <nav class="sm:container sm:mx-auto">
     <!-- Header start -->
-    <div class="z-10 max-w-screen-lg mx-auto block sm:flex sm:justify-between sm:items-center my-6">
+    <div class="max-w-screen-lg mx-auto block sm:flex sm:justify-between sm:items-center my-6">
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header logos -->
-      <div class="flex justify-between items-center px-4 sm:px-0">
+      <div class="flex justify-between items-center">
         <a href="/PersonalWeb/" class="custom-font">Home</a>
       </div>
 
@@ -19,7 +19,7 @@
         </div>
       </div>
       <!-- Header links global-->
-      <div >
+      <div class="flex justify-between items-center">
         <button type="button" class="relative" @click="() => { isLangsHidden = !isLangsHidden }">
           <i data-feather="globe"></i>
         </button>
