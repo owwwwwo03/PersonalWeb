@@ -2,9 +2,9 @@
     <div :style="{ 'background-image': 'url(' + imageUrl + ')' }" class="background-container">
         <!-- Text on the background image -->
         <div class="text-overlay custom-font">
-            <p class="text-overlay-title mb-2">V-Bike</p>
-            <p class="text-overlay-subtitle mb-10">真實全景影片式虛擬實境結合下肢踩踏裝置系統</p>
-            <p class="text-overlay-content">
+            <p :style="titleSizeClass" class="text-overlay-content mb-2 font-bold">V-Bike</p>
+            <p :style="subtitleSizeClass" class="text-overlay-content mb-6">真實全景影片式虛擬實境結合下肢踩踏裝置系統</p>
+            <p :style="contentSizeClass" class="text-overlay-content">
                 V-Bike 是一套透過生理數據、訓練課程等設計，並結合360度真實全景影片式虛擬實境技術的踩踏裝置系統。
                 透過簡單的操作模式，高齡長輩即使人在病房、室內場所，也能V-Bike前往不同的風景名勝、國外景點，
                 一邊踩踏一邊欣賞當地360度的景色，讓訓練不單單只是訓練，而是一趟美好的旅程。</p>
@@ -12,12 +12,12 @@
     </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold">
+        <h1 class="text-6xl font-bold ml-4">
           Review
         </h1>
       </div>
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center ">
+    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
       <div class="flex items-center">    
         <videoPlay 
         v-bind="options" 
@@ -27,22 +27,45 @@
         @canplay="onCanplay" />
       </div>  
     </div>
-    <div class="image-container">
-      <img :src=background_vbike alt="Main Image" class="main-image" @mouseover="showOverlay = true" @mouseleave="showOverlay = false">
-      <transition name="fade">
-        <img v-if="showOverlay" :src=video_vbike_post alt="Overlay Image" class="overlay-image">
-      </transition>
-  </div>
+    <div class="container mx-auto custom-font">
+      <div class="text-left ml-18 mt-10">
+        <h1 class="text-6xl font-bold ml-4">
+          Features
+        </h1>
+      </div>
+    </div>
+
+    <div class="container mx-auto custom-font">
+      <div class="text-left ml-18 mt-10">
+        <h1 class="text-6xl font-bold ml-4">
+          Design
+        </h1>
+      </div>
+    </div>
+    <!--
+      <div class="image-container">
+        <img :src=background_vbike alt="Main Image" class="main-image" @mouseover="showOverlay = true" @mouseleave="showOverlay = false">
+        <transition name="fade">
+          <img v-if="showOverlay" :src=video_vbike_post alt="Overlay Image" class="overlay-image">
+        </transition>
+    </div>
+    -->
+    
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue';
+import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
 import { videoPlay } from 'vue3-video-play/lib/index.js';
 import background_vbike from '@/assets/background_vbike.svg';
 import video_vbike_post from '@/assets/video_vbike_post.svg';
 
-const showOverlay = ref(false);
+
+//const showOverlay = ref(false);
 const imageUrl = ref(background_vbike);
+
+const titleSizeClass = ref({});
+const subtitleSizeClass = ref({});
+const contentSizeClass = ref({});
 
 const options = reactive({
   width: '900px', //播放器寬度
@@ -75,6 +98,29 @@ const onCanplay = (ev) => {
   console.log(ev, '可以播放')
 }
 
+const adjustTextSize = () => {
+  const screenWidth = window.innerWidth;
+  // Adjust text size based on screen width
+  if (screenWidth <= 768) {
+    titleSizeClass.value = { fontSize: '50px' };
+    subtitleSizeClass.value = { fontSize: '16px' };
+    contentSizeClass.value = { fontSize: '14px' };
+  } else {
+    titleSizeClass.value = { fontSize: '150px' };
+    subtitleSizeClass.value = { fontSize: '40px' };
+    contentSizeClass.value = { fontSize: '18px' };
+  }
+};
+
+onMounted(() => {
+  adjustTextSize();
+  window.addEventListener('resize', adjustTextSize);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', adjustTextSize);
+});
+
 </script>
 <style lang="scss" scoped>
 
@@ -91,29 +137,20 @@ const onCanplay = (ev) => {
     /* Optional: Add some width to the container */
     width: 100%;
     /* Use viewport units for the height to make it responsive */
-    height: 60vh;
+    height: auto;
     /* Optional: Add overflow properties if needed */
     overflow: hidden;
     /* Use flexbox to center the text */
 }
 .text-overlay { 
     /* Optional: Add some padding to the text */
-    padding: 6%;
+    padding: 5%;
     color: white; /* Adjust the color as needed */
     
 }
-.text-overlay-title { 
-    font-size: 8em; /* Adjust the formula as needed */
-    text-align: center; /* Center the text horizontally */
-}
-
-.text-overlay-subtitle { 
-    font-size: 1.5em; /* Adjust the formula as needed */
-    text-align: center; /* Center the text horizontally */
-}
 
 .text-overlay-content { 
-    font-size: 1em; /* Adjust the formula as needed */
+    //font-size: 1em; /* Adjust the formula as needed */
     text-align: center; /* Center the text horizontally */
 }
 

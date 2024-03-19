@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <div style="height: 50px;"></div>  
       <div class="flex justify-center custom-font">
-          <ul class="list-none flex space-x-16">
+          <ul class="list-none flex" :class="spaceClass">
             <li v-for="social in socials" :key="social.id">
               <img :src="social.image" width="30" style="display: inline-block;" class="mr-2">
               <a :href="social.url" target="_blank" style="display: inline-block;">
@@ -17,10 +17,12 @@
   
 <script lang="ts" setup>
 import feather from 'feather-icons';
-import { onMounted, reactive, onUpdated } from 'vue';
+import { onMounted, reactive, onUpdated, ref, onBeforeUnmount } from 'vue';
 import linkedin_logo from '@/assets/linkedin_logo.svg';
 import github_logo from '@/assets/github_logo.svg';
 import instagram_logo from '@/assets/instagram_logo.svg';
+
+const spaceClass = ref('');
 
 const socials = reactive([
   {
@@ -43,13 +45,28 @@ const socials = reactive([
   },
 ]);
 
+const adjustTextSize = () => {
+  const screenWidth = window.innerWidth;
+  // Adjust text size based on screen width
+  if (screenWidth <= 768) {
+    spaceClass.value = 'space-x-4';
+  } else {
+    spaceClass.value = 'space-x-16';
+  }
+};
+
+
 onMounted(() => {
   feather.replace();
+  adjustTextSize();
+  window.addEventListener('resize', adjustTextSize);
 });
 onUpdated(() => {
   feather.replace();
 });
-
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', adjustTextSize);
+});
 
 
 </script>

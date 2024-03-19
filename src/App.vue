@@ -57,7 +57,7 @@ onUpdated(() => {
 .back-to-top {
   position: fixed;
   bottom: 50px;
-  right: 50px;
+  right: 20px;
   transition: transform 0.5s ease-in-out;
 }
 
