@@ -42,6 +42,12 @@
         </h1>
       </div>
     </div>
+    <div class="container mx-auto custom-font block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
+      <div class="button-section">
+          <button type="button" class="btn-default" @click="goBackToProjects()">Back to Projects</button>
+      </div>
+    </div>
+    
     <!--
       <div class="image-container">
         <img :src=background_vbike alt="Main Image" class="main-image" @mouseover="showOverlay = true" @mouseleave="showOverlay = false">
@@ -58,6 +64,7 @@ import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
 import { videoPlay } from 'vue3-video-play/lib/index.js';
 import background_vbike from '@/assets/background_vbike.svg';
 import video_vbike_post from '@/assets/video_vbike_post.svg';
+import router from '@/router';
 
 
 //const showOverlay = ref(false);
@@ -112,6 +119,10 @@ const adjustTextSize = () => {
   }
 };
 
+const goBackToProjects = () =>{
+  router.push({ path: "/PersonalWeb/Projects"});
+};
+
 onMounted(() => {
   adjustTextSize();
   window.addEventListener('resize', adjustTextSize);
@@ -152,6 +163,16 @@ onBeforeUnmount(() => {
 .text-overlay-content { 
     //font-size: 1em; /* Adjust the formula as needed */
     text-align: center; /* Center the text horizontally */
+}
+
+.button-section {
+	margin-top: 100px;
+
+	button {
+		height: 60px !important;
+		width: 100% !important;
+		font-size: 18px !important;
+	}
 }
 
 
