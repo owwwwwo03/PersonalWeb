@@ -24,44 +24,105 @@
 					<img class="border-none" src="../../assets/aboutme_logo.svg" />
 					<p class="text-2xl font-bold ml-4">ABOUT ME</p>
 				</div>
-				<p class="text-2x1 mb-6 ml-12">
-					I am SU YI XIANG, currently working as an engineer in the Digital Experience Development Department at AUO Company. 
-					My expertise lies HCI, VR/AR development, and front-end interface design and implementation. 
-					I aspire to maintain an open and creative mindset in my design work, continuously learn new knowledge, and deepen my skills. 
-					I strive to objectively analyze data and technological trends, implement solutions, and ensure execution efficiency to face various unknowns and challenges in life.
+				<p class="text-xl mb-8 ml-12">
+					{{ $t("about-content-aboutme") }}
 				</p>
 				<div class="flex items-center mb-4">
 					<img class="border-none" src="../../assets/education_logo.svg" />
 					<p class="text-2xl font-bold ml-4">EDUCATION</p>
 				</div>
-				<div class="flex items-center mb-4">
-					<img class="border-none" src="../../assets/ncku_logo.svg" />
-					<p class="text-2x1 ml-2">National Cheng Kung University Master’s degree , Sep 2019 - Feb 2022</p>
+				<div class="mb-4">
+					<div class="flex items-center mb-2">
+						<img class="border-none" src="../../assets/ncku_logo.svg" />
+						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-education-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-education-01-content-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-education-01-content-02") }}</p>
+					</div>
 				</div>
-				<div class="flex items-center mb-4">
-					<img class="border-none" src="../../assets/ksu_logo.svg" />
-					<p class="text-2x1 ml-2">National Kyushu University Master’s Exchange , Sep 2021 - Jan 2022</p>
+				<div class="mb-4">
+					<div class="flex items-center mb-2">
+						<img class="border-none" src="../../assets/ksu_logo.svg" />
+						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-education-02") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-education-02-content-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-education-02-content-02") }}</p>
+					</div>
 				</div>
-				<div class="flex items-center mb-6">
-					<img class="border-none" src="../../assets/nknu_logo.svg" />
-					<p class="text-2x1 ml-2">National Kaohsiung Normal University Bachelor’s degree , Sep 2016 - Jun 2019</p>
+				<div class="mb-8">
+					<div class="flex items-center mb-2">
+						<img class="border-none" src="../../assets/nknu_logo.svg" />
+						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-education-03") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-education-03-content-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-education-03-content-02") }}</p>
+					</div>
 				</div>
 				
 				<div class="flex items-center mb-4">
 					<img class="border-none" src="../../assets/experience_logo.svg" />
 					<p class="text-2xl font-bold ml-4">EXPERIENCE</p>
 				</div>
-				<div class="flex items-center mb-4">
-					<img class="border-none" src="../../assets/auo_logo.svg" />
-					<p class="text-2x1 ml-2">AUO Digital Experience Development Senior Engineer , Mar 2022 - Present</p>
+				<div class="mb-4">
+					<div class="flex items-center mb-2">
+						<img class="border-none" src="../../assets/auo_logo.svg" />
+						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-experience-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-01-content-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-01-content-02") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-01-content-03") }}</p>
+					</div>
 				</div>
-				<div class="flex items-center mb-4">
-					<img class="border-none" src="../../assets/ncku_logo.svg" />
-					<p class="text-2x1 ml-2">National Cheng Kung University Project Research Assistant , Sep 2020 - Jun 2021</p>
+				<div class="mb-4">
+					<div class="flex items-center mb-2">
+						<img class="border-none" src="../../assets/ncku_logo.svg" />
+						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-experience-02") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-02-content-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-02-content-02") }}</p>
+					</div>
 				</div>
-				<div class="flex items-center mb-4">
-					<img class="border-none" src="../../assets/25togo_logo.svg" />
-					<p class="text-2x1 ml-2">25TOGO Design Product Design Intern , Jul 2018 - Aug 2018</p>
+				<div class="mb-4">
+					<div class="flex items-center mb-2">
+						<img class="border-none" src="../../assets/25togo_logo.svg" />
+						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-experience-03") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-03-content-01") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-03-content-02") }}</p>
+					</div>
 				</div>
 			</div>
 		</section>

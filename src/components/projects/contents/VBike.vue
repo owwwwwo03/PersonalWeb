@@ -44,7 +44,7 @@
     </div>
     <div class="container mx-auto custom-font block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
       <div class="button-section">
-          <button type="button" class="btn-default" @click="goBackToProjects()">Back to Projects</button>
+          <button type="button" class="btn-default" @click="goBackToProjects()">Go Back</button>
       </div>
     </div>
     
