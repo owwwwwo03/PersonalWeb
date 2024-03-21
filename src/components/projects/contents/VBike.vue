@@ -34,7 +34,13 @@
         </h1>
       </div>
     </div>
-
+    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
+      <img :src=gif_vbike01 class="gif-size">
+    </div>
+    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-20 justify-center">
+      <img :src=gif_vbike02 class="gif-size">
+      <img :src=gif_vbike03 class="gif-size">
+    </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
         <h1 class="text-6xl font-bold ml-4">
@@ -64,6 +70,9 @@ import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
 import { videoPlay } from 'vue3-video-play/lib/index.js';
 import background_vbike from '@/assets/background_vbike.svg';
 import video_vbike_post from '@/assets/video_vbike_post.svg';
+import gif_vbike01 from '@/assets/gif_vbike01.gif';
+import gif_vbike02 from '@/assets/gif_vbike02.gif';
+import gif_vbike03 from '@/assets/gif_vbike03.gif';
 import router from '@/router';
 
 
@@ -202,5 +211,9 @@ onBeforeUnmount(() => {
 .fade-enter,
 .fade-leave-to {
   opacity: 1;
+}
+.gif-size{
+  width: 500px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 </style>
