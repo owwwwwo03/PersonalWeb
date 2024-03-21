@@ -4,7 +4,7 @@
     <div class="max-w-screen-lg mx-auto block sm:flex sm:justify-between sm:items-center my-6">
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header logos -->
-      <div class="flex justify-between items-center">
+      <div class="container-fluid">
         <a href="/PersonalWeb/" class="custom-font">Home</a>
       </div>
 
@@ -19,7 +19,7 @@
         </div>
       </div>
       <!-- Header links global-->
-      <div class="flex justify-between items-center">
+      <div class="container-fluid">
         <button type="button" class="relative" @click="() => { isLangsHidden = !isLangsHidden }">
           <i data-feather="globe"></i>
         </button>
@@ -111,5 +111,33 @@ onUpdated(() => {
 	@apply text-indigo-700;
 	@apply dark:text-indigo-400;
 	@apply font-medium;
+}
+
+/* 在手機螢幕寬度下的 CSS */
+@media only screen and (max-width: 640px) {
+  /* 移除不必要的容器 */
+  .container-fluid {
+    display: block;
+    width: 100%;
+  }
+  
+  /* 調整元素排列 */
+  .max-w-screen-lg {
+    width: 100%;
+  }
+  .custom-font {
+    font-family: Inter, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold; 
+  }
+  
+  /* 調整按鈕和下拉選單寬度 */
+  .relative {
+    width: auto;
+  }
+  #dropdown-langs {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 </style>
