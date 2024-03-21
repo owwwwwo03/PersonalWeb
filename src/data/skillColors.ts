@@ -5,7 +5,7 @@ const skillColors=[
       },
       {
         skill: 'Hololens',
-        color: '#8354D2'
+        color: '#1D3BA8'
       },
       {
         skill: 'MRTK',
@@ -13,11 +13,11 @@ const skillColors=[
       },
       {
         skill: 'Stable Diffusion',
-        color: '#FF7262'
+        color: '#7d3fb2'
       },      
       {
         skill: 'Unreal',
-        color: '#414141'
+        color: '#8354D2'
       },
       {
         skill: 'Azure',
@@ -38,7 +38,19 @@ const skillColors=[
       {
         skill: 'Arduino',
         color: '#00979C'
-      }
+      },
+      {
+        skill: 'GLSL/HLSL',
+        color: '#7d3fb2'
+      },
+      {
+        skill: 'Mediapipe',
+        color: '#8354D2'
+      },
+      {
+        skill: 'OpenCV',
+        color: '#7d3fb2'
+      },
 
 ];
 export default skillColors;

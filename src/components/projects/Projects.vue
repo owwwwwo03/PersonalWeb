@@ -80,4 +80,12 @@ const getCategoryColor = (inputCategory) =>{
 .custom-font {
   font-family: Inter;
 }
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Example: enlarging the image on hover */
+}
 </style>

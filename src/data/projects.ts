@@ -2,6 +2,8 @@
 // Note: Here we are getting data from a ts file, but in a different project I'll be fetching these projects from some srt of APIs.
 import fabAR_svg from '@/assets/projects_fab_ar.svg';
 import kick_svg from '@/assets/projects_kick.svg';
+import vbike_svg from '@/assets/projects_vbike.svg';
+import kuchipa_svg from '@/assets/projects_kuchipa.svg';
 
 const projects = [
     {
@@ -34,7 +36,7 @@ const projects = [
 		category: ['VR','HCI'],
         skill:['Unity','GLSL/HLSL','UIUX','Arduino'],
         url: '/PersonalWeb/projects/vBike',
-        imgUrl:fabAR_svg,
+        imgUrl:vbike_svg,
     },
     {
         id: 5,
@@ -42,7 +44,7 @@ const projects = [
 		category: ['HCI'],
         skill:['Unity','Mediapipe','OpenCV'],
         url: '/PersonalWeb/projects/kuchipa',
-        imgUrl:fabAR_svg,
+        imgUrl:kuchipa_svg,
     },
     
     {
