@@ -1,4 +1,15 @@
 <template>
+    <div :style="{ 'background-image': 'url(' + imageUrl + ')' }" class="background-container">
+          <!-- Text on the background image -->
+          <div class="text-overlay custom-font">
+              <p :style="titleSizeClass" class="text-overlay-content mb-2 font-bold">Kuchipa</p>
+              <p :style="subtitleSizeClass" class="text-overlay-content mb-6">運用影像辨識孩童發音嘴型訓練設計</p>
+              <p :style="contentSizeClass" class="text-overlay-content">
+                Kuchipa專案為利用互動設計與製作的方式，幫助孩童學習發音以避免構音障礙的問題發生。
+                而其中的一款互動：びいいいいむ主要利用人臉辨識去偵測小孩的嘴型，透過嘴巴射出的雷射去攻擊怪物，
+                讓小孩可以以有趣的遊戲去維持著嘴型，訓練他嘴部附近的肌肉。</p>
+          </div>
+      </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
         <h1 class="text-6xl font-bold ml-4">
@@ -18,8 +29,15 @@
     </div>
 </template>
 <script lang="ts" setup>
-    import { reactive } from 'vue';
+    import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
     import { videoPlay } from 'vue3-video-play/lib/index.js';
+    import background_kuchipa from '@/assets/background_kuchipa.svg';
+
+    const imageUrl = ref(background_kuchipa);
+
+    const titleSizeClass = ref({});
+    const subtitleSizeClass = ref({});
+    const contentSizeClass = ref({});
 
     const options = reactive({
     width: '880px', //播放器寬度
@@ -51,4 +69,61 @@
     const onCanplay = (ev) => {
     console.log(ev, '可以播放')
     }
+
+    const adjustTextSize = () => {
+      const screenWidth = window.innerWidth;
+      // Adjust text size based on screen width
+      if (screenWidth <= 768) {
+        titleSizeClass.value = { fontSize: '50px' };
+        subtitleSizeClass.value = { fontSize: '16px' };
+        contentSizeClass.value = { fontSize: '14px' };
+      } else {
+        titleSizeClass.value = { fontSize: '150px' };
+        subtitleSizeClass.value = { fontSize: '40px' };
+        contentSizeClass.value = { fontSize: '18px' };
+      }
+    };
+
+    onMounted(() => {
+      adjustTextSize();
+      window.addEventListener('resize', adjustTextSize);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', adjustTextSize);
+    });
 </script>
+
+<style  lang="scss" scoped>
+
+  .custom-font {
+    font-family: Inter;
+  }
+  .background-container {
+      /* Ensure the background image covers the entire container */
+      background-size: cover;
+      /* Center the background image */
+      background-position: center;
+      /* Fix the background image to the container */
+      background-attachment: fixed;
+      /* Optional: Add some width to the container */
+      width: 100%;
+      /* Use viewport units for the height to make it responsive */
+      height: auto;
+      /* Optional: Add overflow properties if needed */
+      overflow: hidden;
+      /* Use flexbox to center the text */
+  }
+  .text-overlay { 
+      /* Optional: Add some padding to the text */
+      padding: 5%;
+      color: white; /* Adjust the color as needed */
+      
+  }
+
+  .text-overlay-content { 
+      //font-size: 1em; /* Adjust the formula as needed */
+      text-align: center; /* Center the text horizontally */
+  }
+
+</style>

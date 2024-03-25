@@ -34,19 +34,50 @@
         </h1>
       </div>
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
-      <img :src=gif_vbike01 class="gif-size">
+    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-20 justify-center">
+        <p class="ml-4">
+          V-Bike 主要以頭戴顯示器以及螢幕作為播放媒介兩種方式，讓使用者能自由的選擇自己喜歡的方式進行運動。
+          我們將拍攝好全景影片內容放入Unity進行虛實整合系統設計，透過視覺化、直覺的操作方式，設計適合使用者的介面及運動流程。
+        </p>
+    </div>
+    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike01>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-20 justify-center">
-      <img :src=gif_vbike02 class="gif-size">
-      <img :src=gif_vbike03 class="gif-size">
+        <p class="ml-4">
+          在 Pilot Test時使用螢幕與頭戴顯示器兩種顯示器給高齡者進行使用。頭戴顯示器的部分，長輩們常常因為頭暈、頭戴顯示器會壓到眼鏡造成不適、
+          畫面感覺有點霧霧的、焦距調整不到自己適合的距離等原因，造成體驗時間約1分鐘就希望能停止活動。以螢幕作為觀賞的部分，每位受測者皆踩踏超過4分鐘的時間，
+          且認為螢幕觀賞搭配踩踏比較舒服。此外對於畫面內容則認為能回味或比較之前去過的景點差異而感到喜歡，也認為可以邊運動邊觀賞喜歡的古蹟景點很不錯。
+          因此了解到高齡者對於使用螢幕作為真實全景影片式虛擬實境結合腳踩踏裝置的介面體驗優於使用頭戴顯示器。
+        </p>
     </div>
+    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike02>
+    </div>
+    <!--
+      <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
+        <img :src=gif_vbike01 class="gif-size">
+      </div>
+      <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-20 justify-center">
+        <img :src=gif_vbike02 class="gif-size">
+        <img :src=gif_vbike03 class="gif-size">
+      </div>
+    -->
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
         <h1 class="text-6xl font-bold ml-4">
           Design
         </h1>
       </div>
+    </div>
+    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike03>
+    </div>
+    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike04>
+    </div>
+    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike05>
     </div>
     <div class="container mx-auto custom-font block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
       <div class="button-section">
@@ -70,9 +101,14 @@ import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
 import { videoPlay } from 'vue3-video-play/lib/index.js';
 import background_vbike from '@/assets/background_vbike.svg';
 import video_vbike_post from '@/assets/video_vbike_post.svg';
-import gif_vbike01 from '@/assets/gif_vbike01.gif';
-import gif_vbike02 from '@/assets/gif_vbike02.gif';
-import gif_vbike03 from '@/assets/gif_vbike03.gif';
+//import gif_vbike01 from '@/assets/gif_vbike01.gif';
+//import gif_vbike02 from '@/assets/gif_vbike02.gif';
+//import gif_vbike03 from '@/assets/gif_vbike03.gif';
+import picture_vbike01 from '@/assets/picture_vbike01.svg';
+import picture_vbike02 from '@/assets/picture_vbike02.svg';
+import picture_vbike03 from '@/assets/picture_vbike03.svg';
+import picture_vbike04 from '@/assets/picture_vbike04.svg';
+import picture_vbike05 from '@/assets/picture_vbike05.svg';
 import router from '@/router';
 
 
