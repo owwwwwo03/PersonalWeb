@@ -8,7 +8,7 @@
 			<!-- About left contents -->
 			<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<div>
-					<img class="border-none rounded-xl" src="../../assets/personal_profile.jpg" />
+					<img class="border-none rounded-xl img-center" src="../../assets/personal_profile.jpg" />
 				</div>
 				<div class="flex justify-center sm:block mb-10">
 					<a download="SeanYXSu Resume English.pdf" href="../../assets/files/ResumeEnglish.pdf"
@@ -148,5 +148,11 @@ onUpdated(() => {
 
 .custom-font {
   font-family: Inter;
+}
+.img-center{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

@@ -34,16 +34,16 @@
         </h1>
       </div>
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-20 justify-center">
+    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
         <p class="ml-4">
           V-Bike 主要以頭戴顯示器以及螢幕作為播放媒介兩種方式，讓使用者能自由的選擇自己喜歡的方式進行運動。
           我們將拍攝好全景影片內容放入Unity進行虛實整合系統設計，透過視覺化、直覺的操作方式，設計適合使用者的介面及運動流程。
         </p>
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike01>
+    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike01 class="img-center" :style="imgClass">
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-20 justify-center">
+    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
         <p class="ml-4">
           在 Pilot Test時使用螢幕與頭戴顯示器兩種顯示器給高齡者進行使用。頭戴顯示器的部分，長輩們常常因為頭暈、頭戴顯示器會壓到眼鏡造成不適、
           畫面感覺有點霧霧的、焦距調整不到自己適合的距離等原因，造成體驗時間約1分鐘就希望能停止活動。以螢幕作為觀賞的部分，每位受測者皆踩踏超過4分鐘的時間，
@@ -51,8 +51,8 @@
           因此了解到高齡者對於使用螢幕作為真實全景影片式虛擬實境結合腳踩踏裝置的介面體驗優於使用頭戴顯示器。
         </p>
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike02>
+    <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike02 class="img-center" :style="imgClass">
     </div>
     <!--
       <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
@@ -70,14 +70,14 @@
         </h1>
       </div>
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike03>
+    <div class="container mx-auto block sm:flex mt-10 m:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike03 class="img-center" :style="imgClass">
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike04>
+    <div class="container mx-auto block sm:flex mt-10 sm:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike04 class="img-center" :style="imgClass">
     </div>
-    <div class="container mx-auto block sm:flex sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike05>
+    <div class="container mx-auto block sm:flex mt-10 sm:gap-10 sm:mt-10 justify-center">
+        <img :src=picture_vbike05 class="img-center" :style="imgClass">
     </div>
     <div class="container mx-auto custom-font block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
       <div class="button-section">
@@ -118,6 +118,7 @@ const imageUrl = ref(background_vbike);
 const titleSizeClass = ref({});
 const subtitleSizeClass = ref({});
 const contentSizeClass = ref({});
+const imgClass = ref({});
 
 const options = reactive({
   width: '900px', //播放器寬度
@@ -150,17 +151,19 @@ const onCanplay = (ev) => {
   console.log(ev, '可以播放')
 }
 
-const adjustTextSize = () => {
+const adjustSize = () => {
   const screenWidth = window.innerWidth;
   // Adjust text size based on screen width
   if (screenWidth <= 768) {
     titleSizeClass.value = { fontSize: '50px' };
     subtitleSizeClass.value = { fontSize: '16px' };
     contentSizeClass.value = { fontSize: '14px' };
+    imgClass.value = {width:'90%'};
   } else {
     titleSizeClass.value = { fontSize: '150px' };
     subtitleSizeClass.value = { fontSize: '40px' };
     contentSizeClass.value = { fontSize: '18px' };
+    imgClass.value = {width:'60%'};
   }
 };
 
@@ -169,12 +172,12 @@ const goBackToProjects = () =>{
 };
 
 onMounted(() => {
-  adjustTextSize();
-  window.addEventListener('resize', adjustTextSize);
+  adjustSize();
+  window.addEventListener('resize', adjustSize);
 });
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', adjustTextSize);
+  window.removeEventListener('resize', adjustSize);
 });
 
 </script>
@@ -212,6 +215,9 @@ onBeforeUnmount(() => {
 
 .button-section {
 	margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 
 	button {
 		height: 60px !important;
@@ -251,5 +257,10 @@ onBeforeUnmount(() => {
 .gif-size{
   width: 500px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
+}
+.img-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

@@ -14,9 +14,7 @@
                                 <span class="">
                                     <i class="text-primary"></i>
                                 </span>
-
                             </div>
-
                         </div>
                         <!-- Project Gallery -->
                         <div class="container mx-auto">
@@ -26,7 +24,7 @@
                                         <router-link :to="item.url" class="block cursor-pointer mb-4" aria-label="">
                                             <div class="flex flex-col items-center">
                                                 <div>
-                                                    <img class="border-none" :src="item.imgUrl" />
+                                                    <img class="border-none img-center" :src="item.imgUrl" />
                                                 </div>
                                                 <div class="text-center px-4 py-6 mr-4">
                                                     <p class="font-bold text-4xl text-dark mb-4">{{ item.title }}</p>
@@ -87,5 +85,12 @@ img {
 
 img:hover {
     transform: scale(1.05); /* Example: enlarging the image on hover */
+}
+
+.img-center{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
