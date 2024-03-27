@@ -8,7 +8,7 @@
 			<!-- About left contents -->
 			<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<div>
-					<img class="border-none rounded-xl img-center" src="../../assets/personal_profile.jpg" />
+					<img class="border-none rounded-xl img-center" :style="imgClass" src="../../assets/personal_profile.jpg" />
 				</div>
 				<div class="flex justify-center sm:block mb-10">
 					<a download="SeanYXSu Resume English.pdf" href="../../assets/files/ResumeEnglish.pdf"
@@ -134,13 +134,30 @@
   
 <script lang="ts" setup>
 import feather from 'feather-icons';
-import { onMounted, onUpdated } from 'vue';
+import { ref, onMounted, onUpdated, onBeforeUnmount } from 'vue';
+
+const imgClass = ref({});
+
+const adjustSize = () => {
+  const screenWidth = window.innerWidth;
+  // Adjust text size based on screen width
+  if (screenWidth <= 768) {
+    imgClass.value = {width:'90%'};
+  } else {
+    imgClass.value = {width:'100%'};
+  }
+};
 
 onMounted(() => {
 	feather.replace();
+	adjustSize();
+  	window.addEventListener('resize', adjustSize);
 });
 onUpdated(() => {
 	feather.replace();
+});
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', adjustSize);
 });
 </script>
   
@@ -150,7 +167,6 @@ onUpdated(() => {
   font-family: Inter;
 }
 .img-center{
-  width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;

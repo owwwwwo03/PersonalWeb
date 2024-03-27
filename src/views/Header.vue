@@ -5,7 +5,7 @@
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header links -->
       <div>
-        <div class="custom-font flex space-x-8">
+        <div class="custom-font flex" :class="spaceClass">
            <!-- Header logos -->
           <a href="/PersonalWeb/">Home</a>
           <ul class="flex space-x-6">
@@ -19,7 +19,7 @@
               <i data-feather="globe"></i>
             </button>
             <div id="dropdown-langs" :class="{ hidden: isLangsHidden }"
-              class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16 ml-[-10rem]">
+              class="z-8 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16"  style="transform: translateX(-150px)">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="langs-button">
                 <li>
                   <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('en-US')">
@@ -63,9 +63,10 @@
 <script lang="ts" setup>
 import feather from 'feather-icons';
 import { CheckIcon } from '@heroicons/vue/24/solid';
-import { onMounted, ref, onUpdated } from 'vue';
+import { onMounted, ref, onUpdated, onBeforeUnmount } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+const spaceClass = ref('');
 
 const { locale } = useI18n();
 
@@ -80,12 +81,27 @@ const changeLanguage = (lang) => {
   console.log(selectedLanguage.value);
 }
 
+const adjustSize = () => {
+  const screenWidth = window.innerWidth;
+  // Adjust text size based on screen width
+  if (screenWidth <= 768) {
+    spaceClass.value = 'space-x-8';
+  } else {
+    spaceClass.value = 'space-x-20';
+  }
+};
+
 
 onMounted(() => {
   feather.replace();
+  adjustSize();
+  window.addEventListener('resize', adjustSize);
 });
 onUpdated(() => {
   feather.replace();
+});
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', adjustSize);
 });
 
 </script>

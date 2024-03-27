@@ -45,7 +45,7 @@ const socials = reactive([
   },
 ]);
 
-const adjustTextSize = () => {
+const adjustSize = () => {
   const screenWidth = window.innerWidth;
   // Adjust text size based on screen width
   if (screenWidth <= 768) {
@@ -58,14 +58,14 @@ const adjustTextSize = () => {
 
 onMounted(() => {
   feather.replace();
-  adjustTextSize();
-  window.addEventListener('resize', adjustTextSize);
+  adjustSize();
+  window.addEventListener('resize', adjustSize);
 });
 onUpdated(() => {
   feather.replace();
 });
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', adjustTextSize);
+  window.removeEventListener('resize', adjustSize);
 });
 
 
