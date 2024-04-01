@@ -4,9 +4,9 @@
 			<h1 class="text-6xl font-bold mb-8">
 				{{$t("contact-title")}}
 			</h1>
-			<p>If you need any further information, please feel free to contact me.</p>	
+			<p class="content-center" :style="widthClass">If you need any further information, please feel free to contact me.</p>	
 			<section class="block sm:flex sm:gap-10 mt-10 sm:mt-10">
-				<div class="w-full sm:w-2/4 mb-7 sm:mb-0">	
+				<div class="w-full sm:w-2/4 mb-7 sm:mb-0 content-center" :style="widthClass">	
 					
 					<div class="input-section">
 						<div class="hover-text">
@@ -23,7 +23,7 @@
 							<button type="submit" class="btn-default">Submit</button>
 						</div>
 					</div>
-				<div class="w-full sm:w-2/4 text-left max-w-4xl ml-4">
+				<div class="w-full sm:w-2/4 text-left max-w-4xl ml-4 content-center" :style="widthClass">
 					<GoogleMap api-key="YOUR_GOOGLE_MAPS_API_KEY" style="width: 100%; height: 500px" :center="center" :zoom="15">
 						<Marker :options="markerOptions" />
 					</GoogleMap>
@@ -35,7 +35,7 @@
 </template>
   
 <script lang="ts" setup>
-import { defineComponent } from "vue";
+import { ref, onMounted, defineComponent, onBeforeUnmount } from "vue";
 import { GoogleMap, Marker } from "vue3-google-map";
 
 
@@ -43,6 +43,27 @@ const center = { lat: 40.689247, lng: -74.044502 };
 const markerOptions = { position: center, label: "L", title: "LADY LIBERTY" };
 
 defineComponent({ components: { GoogleMap, Marker }, center, markerOptions });
+
+const widthClass = ref({});
+
+const adjustSize = () => {
+  const screenWidth = window.innerWidth;
+  // Adjust text size based on screen width
+  if (screenWidth <= 768) {
+    widthClass.value = {width:'90%'};
+  } else {
+    widthClass.value = {width:'100%'};
+  }
+};
+
+onMounted(() => {
+	adjustSize();
+  	window.addEventListener('resize', adjustSize);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', adjustSize);
+});
 
 </script>
   
@@ -177,5 +198,11 @@ footer {
 	display: flex;
 	flex-direction: column;
 	gap: 1px;
+}
+
+.content-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

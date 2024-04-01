@@ -8,7 +8,7 @@
 			<!-- About left contents -->
 			<div class="w-full sm:w-1/4 mb-7 sm:mb-0">
 				<div>
-					<img class="border-none rounded-xl img-center" :style="imgClass" src="../../assets/personal_profile.jpg" />
+					<img class="border-none rounded-xl content-center" :style="widthClass" src="../../assets/personal_profile.jpg" />
 				</div>
 				<div class="flex justify-center sm:block mb-10">
 					<a download="SeanYXSu Resume English.pdf" href="../../assets/files/ResumeEnglish.pdf"
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 			<!-- About right contents -->
-			<div class="w-full sm:w-3/4 text-left max-w-4xl ml-4">
+			<div class="w-full sm:w-3/4 text-left max-w-4xl ml-4 content-center" :style="widthClass">
 				<div class="flex items-center mb-4">
 					<img class="border-none" src="../../assets/aboutme_logo.svg" />
 					<p class="text-2xl font-bold ml-4">ABOUT ME</p>
@@ -136,15 +136,15 @@
 import feather from 'feather-icons';
 import { ref, onMounted, onUpdated, onBeforeUnmount } from 'vue';
 
-const imgClass = ref({});
+const widthClass = ref({});
 
 const adjustSize = () => {
   const screenWidth = window.innerWidth;
   // Adjust text size based on screen width
   if (screenWidth <= 768) {
-    imgClass.value = {width:'90%'};
+    widthClass.value = {width:'90%'};
   } else {
-    imgClass.value = {width:'100%'};
+    widthClass.value = {width:'100%'};
   }
 };
 
@@ -166,7 +166,7 @@ onBeforeUnmount(() => {
 .custom-font {
   font-family: Inter;
 }
-.img-center{
+.content-center{
   display: block;
   margin-left: auto;
   margin-right: auto;

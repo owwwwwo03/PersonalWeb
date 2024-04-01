@@ -105,7 +105,7 @@
       /* Center the background image */
       background-position: center;
       /* Fix the background image to the container */
-      background-attachment: fixed;
+      background-attachment: scroll;
       /* Optional: Add some width to the container */
       width: 100%;
       /* Use viewport units for the height to make it responsive */

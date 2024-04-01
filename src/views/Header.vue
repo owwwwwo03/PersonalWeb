@@ -1,25 +1,25 @@
 <template>
   <nav class="sm:container sm:mx-auto">
     <!-- Header start -->
-    <div class="max-w-lg mx-auto block sm:flex sm:justify-between sm:items-center my-6">
+    <div class="max-w-lg mx-auto my-6">
       <!-- Header menu links and small screen hamburger menu -->
       <!-- Header links -->
       <div>
         <div class="custom-font flex" :class="spaceClass">
            <!-- Header logos -->
-          <a href="/PersonalWeb/">Home</a>
-          <ul class="flex space-x-6">
+          <a class="content-center" href="/PersonalWeb/">Home</a>
+          <ul class="flex space-x-8">
             <router-link to="/PersonalWeb/projects" class="nav-link">{{$t("project-title")}}</router-link>
             <router-link to="/PersonalWeb/about" class="nav-link">{{$t("about-title")}}</router-link>
             <router-link to="/PersonalWeb/contact" class="nav-link">{{$t("contact-title")}}</router-link>
           </ul>
           <!-- Header links global-->
           <div>
-            <button type="button" class="relative" @click="() => { isLangsHidden = !isLangsHidden }">
+            <button type="button" class="relative content-center" @click="() => { isLangsHidden = !isLangsHidden }">
               <i data-feather="globe"></i>
             </button>
             <div id="dropdown-langs" :class="{ hidden: isLangsHidden }"
-              class="z-8 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16"  style="transform: translateX(-150px)">
+              class="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16"  style="transform: translateX(-150px)">
               <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="langs-button">
                 <li>
                   <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('en-US')">
@@ -73,6 +73,8 @@ const { locale } = useI18n();
 const isLangsHidden = ref(true);
 const selectedLanguage = ref(localStorage.getItem('selectedLanguage') || "zh-TW");
 
+//const textSizeClass = ref({});
+
 const changeLanguage = (lang) => {
   localStorage.setItem('selectedLanguage', lang);
   locale.value = lang;
@@ -85,7 +87,7 @@ const adjustSize = () => {
   const screenWidth = window.innerWidth;
   // Adjust text size based on screen width
   if (screenWidth <= 768) {
-    spaceClass.value = 'space-x-8';
+    spaceClass.value = 'space-x-10';
   } else {
     spaceClass.value = 'space-x-20';
   }
@@ -139,7 +141,7 @@ onBeforeUnmount(() => {
   }
   .custom-font {
     font-family: Inter, sans-serif;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold; 
   }
   
@@ -151,5 +153,11 @@ onBeforeUnmount(() => {
     width: 100%;
     margin-left: 0;
   }
+}
+
+.content-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
