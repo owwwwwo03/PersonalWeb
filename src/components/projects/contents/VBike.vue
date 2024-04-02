@@ -12,7 +12,7 @@
     </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4">
+        <h1 class="text-6xl font-bold ml-4" data-aos="fade-left">
           Review
         </h1>
       </div>
@@ -29,22 +29,22 @@
     </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4">
+        <h1 class="text-6xl font-bold ml-4" data-aos="fade-left">
           Features
         </h1>
       </div>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
-        <p class="ml-4 content-center" :style="widthClass">
+        <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
           V-Bike 主要以頭戴顯示器以及螢幕作為播放媒介兩種方式，讓使用者能自由的選擇自己喜歡的方式進行運動。
           我們將拍攝好全景影片內容放入Unity進行虛實整合系統設計，透過視覺化、直覺的操作方式，設計適合使用者的介面及運動流程。
         </p>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike01 class="content-center" :style="imgClass">
+        <img :src=picture_vbike01 class="content-center" :style="imgClass" data-aos="fade-up">
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
-        <p class="ml-4 content-center" :style="widthClass">
+        <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
           在 Pilot Test時使用螢幕與頭戴顯示器兩種顯示器給高齡者進行使用。頭戴顯示器的部分，長輩們常常因為頭暈、頭戴顯示器會壓到眼鏡造成不適、
           畫面感覺有點霧霧的、焦距調整不到自己適合的距離等原因，造成體驗時間約1分鐘就希望能停止活動。以螢幕作為觀賞的部分，每位受測者皆踩踏超過4分鐘的時間，
           且認為螢幕觀賞搭配踩踏比較舒服。此外對於畫面內容則認為能回味或比較之前去過的景點差異而感到喜歡，也認為可以邊運動邊觀賞喜歡的古蹟景點很不錯。
@@ -52,7 +52,7 @@
         </p>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike02 class="content-center" :style="imgClass">
+        <img :src=picture_vbike02 class="content-center" :style="imgClass" data-aos="fade-up">
     </div>
     <!--
       <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
@@ -65,43 +65,43 @@
     -->
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4">
+        <h1 class="text-6xl font-bold ml-4"  data-aos="fade-left">
           Design
         </h1>
       </div>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
-        <p class="ml-4 content-center" :style="widthClass">
+        <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
           V-Bike以高齡者為主要使用者，考量每項步驟的高齡者操作促使功能或狀態改變，讓高齡者能在執行完動作時，系統能馬上有回饋以增加彼此的互動性。
           透過一系列的設計方法Functional Map, Flow Chart等，將使用者流程的步驟作為流程的起點與終點，
           考量高齡者如何使用控制器去改變畫面狀態進行設計，以做為後續程式開發實作的依循。
         </p>
     </div>
     <div class="container mx-auto block sm:flex mt-10 m:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike03 class="content-center" :style="imgClass">
+        <img :src=picture_vbike03 class="content-center" :style="imgClass" data-aos="fade-up">
     </div>
     <div class="container mx-auto block sm:flex mt-10 sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike04 class="content-center" :style="imgClass">
+        <img :src=picture_vbike04 class="content-center" :style="imgClass" data-aos="fade-up">
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
-        <p class="ml-4 content-center" :style="widthClass">
+        <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
           控制器在設計規劃上以簡單、少量的操作按鍵進行硬體與電路設計，只有使用確定與取消的按鍵，還有可以觀賞全景影片的搖桿。並安置在握把中間位置，以方便高齡者能輕易操作，並透過藍芽通訊，
           將指令傳給V-bike系統以促使系統運作。配合QRcode登入功能，製作給高齡者可單手拿取進行掃描的卡片。
           並且留有空白位置可以讓高齡者寫上自己的姓名或編號，以方便在拿取卡片時不會拿錯。
         </p>
     </div>
     <div class="container mx-auto block sm:flex mt-10 sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike05 class="content-center" :style="imgClass">
+        <img :src=picture_vbike05 class="content-center" :style="imgClass" data-aos="fade-up">
     </div> 
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4">
+        <h1 class="text-6xl font-bold ml-4" data-aos="fade-left">
           Experiment
         </h1>
       </div>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
-        <p class="ml-4 content-center" :style="widthClass">
+        <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
           V-Bike為了瞭解真實全景影片式虛擬實境對於高齡者使用踩踏裝置的動機成效，將裝置帶至嘉義東過社區進行兩個月的測試，
           實驗過程中記錄此系統在社區場域與高齡者互動的情況，了解是否符合場域需求，以及高齡者、親屬與照護者的使用意願性，
           作為未來落實評估的依據。受測對象為65歲以上之高齡者。收案人數為10人。高齡者在實驗介入前從未使用過此V-Bike系統，
@@ -110,7 +110,7 @@
         </p>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
-        <p class="ml-4 content-center" :style="widthClass">
+        <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
           測試過程中，我們收集高齡者的相關生理數據，如：(1)踩踏圈數：分別紀錄高齡者使用資訊版與風景版每次的踩踏圈數，以比較受測者前後是否有變化與其原因、
           (2)踩踏速率：分別紀錄高齡者使用資訊版與風景版每次的踩踏速率，以每秒測到的踩踏速率綜合除以每次踩踏時間。以了解受測者的下肢能力在資訊版與風景版之間是否有差異、
           (3)平均心率：將每次踩踏過程中的心率總和除以踩踏時間，作為受試者在踩踏時衡量運動能力的參考、
@@ -118,10 +118,10 @@
         </p>
     </div>
     <div class="container mx-auto block sm:flex mt-10 sm:gap-10 sm:mt-10 justify-center">
-        <img :src=picture_vbike06 class="content-center" :style="imgClass">
+        <img :src=picture_vbike06 class="content-center" :style="imgClass" data-aos="fade-up">
     </div> 
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
-        <p class="ml-4 content-center" :style="widthClass">
+        <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
           透過兩個月的測試後，我們認為透過真實全景影片進行觀賞，高齡者會更覺得自己有親身到當地遊玩的感受。針對真實全景影片帶來的沉浸體驗之特色如何讓高齡者長期使用，
           我們提出可以藉由虛擬導覽的方式，利用關卡或箭頭指引他們使用360度觀賞，增加他們對內容的認識。針對系統內容方面，我們建議能增加真實全景影片數量到10部以上讓高齡者能有更多的選擇，
           並搭配影音解說導覽風景內容與遊戲關卡設計，預期能讓高齡者享受真實全景影片的沉浸體驗之外，更投入於互動系統當中。但目前真實全景影片虛擬實境結合踩踏裝置僅測試於社區場域，

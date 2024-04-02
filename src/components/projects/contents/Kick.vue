@@ -3,10 +3,12 @@
       <img :src=gif_kick01>
       <img :src=gif_kick02>
     </div>
-    <div class="fancy">
-        <input type="text" placeholder="Enter your name" />
-    </div>
-    
+    <!--
+         <div class="fancy">
+            <input type="text" placeholder="Enter your name" />
+        </div>
+    -->
+   
 </template>
 <script lang="ts" setup>
     import gif_kick01 from '@/assets/gif_kick01.gif';

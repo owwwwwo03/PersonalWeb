@@ -12,7 +12,6 @@ import './css/index';
 //import 'bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import i18n from './config/i18n';
-import 'aos/dist/aos.css';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import vue3videoPlay from 'vue3-video-play';
 import 'vue3-video-play/dist/style.css';

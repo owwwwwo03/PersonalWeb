@@ -26,8 +26,10 @@ import Header from '@/views/Header.vue';
 import Footer from '@/views/Footer.vue';
 import { onMounted, onUpdated } from 'vue';
 import feather from 'feather-icons';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-
+AOS.init();
 const topFunction = () =>{
   document.body.scrollTop =0;
   document.documentElement.scrollTop = 0;
