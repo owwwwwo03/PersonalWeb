@@ -2,7 +2,7 @@
     <div class="container mx-auto custom-font">
         <!-- Projects grid title -->
         <div class="text-left ml-18">
-            <h1 class="text-6xl font-bold">{{$t("project-title")}}</h1>
+            <h1 class="text-6xl font-bold" data-aos="fade-left">{{$t("project-title")}}</h1>
             <div class="container mx-auto">
                 <!-- Projects grid -->
                 <section class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <!-- Project Gallery -->
-                        <div class="container mx-auto">
+                        <div class="container mx-auto" data-aos="fade-up">
                             <div class="flex justify-center">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                     <div class="projectGallery" v-for="item in useProjectData" :key="item.id">

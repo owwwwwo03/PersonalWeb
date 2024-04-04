@@ -61,6 +61,7 @@ onUpdated(() => {
   bottom: 50px;
   right: 20px;
   transition: transform 0.5s ease-in-out;
+  z-index: 2;
 }
 
 /* Add Bootstrap classes for shadow and hover effect. */

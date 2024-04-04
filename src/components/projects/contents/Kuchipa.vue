@@ -119,6 +119,11 @@
           未來也將設計讓小朋友繪製塗鴉的方式，透過掃描讓小朋友的畫作能融入到遊戲當中以增加遊戲與小孩子的連結性。
         </p>
     </div>
+    <div class="container mx-auto custom-font block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
+      <div class="button-section">
+          <button type="button" class="btn-default" @click="goBackToProjects()">Go Back</button>
+      </div>
+    </div>
 </template>
 <script lang="ts" setup>
     import { ref, reactive, onMounted, onBeforeUnmount } from 'vue';
@@ -131,6 +136,7 @@
     import picture_kuchipa05 from '@/assets/picture_kuchipa05.svg';
     import picture_kuchipa06 from '@/assets/picture_kuchipa06.svg';
     import picture_kuchipa07 from '@/assets/picture_kuchipa07.svg';
+    import router from '@/router';
     const imageUrl = ref(background_kuchipa);
 
     const titleSizeClass = ref({});
@@ -188,6 +194,10 @@
       }
     };
 
+    const goBackToProjects = () =>{
+      router.push({ path: "/PersonalWeb/Projects"});
+    };
+
     onMounted(() => {
       adjustTextSize();
       window.addEventListener('resize', adjustTextSize);
@@ -228,6 +238,19 @@
   .text-overlay-content { 
       //font-size: 1em; /* Adjust the formula as needed */
       text-align: center; /* Center the text horizontally */
+  }
+
+  .button-section {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+    button {
+      height: 60px !important;
+      width: 100% !important;
+      font-size: 18px !important;
+    }
   }
   .content-center{
     display: block;

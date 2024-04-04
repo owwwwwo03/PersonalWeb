@@ -1,12 +1,12 @@
 <template>
 	<div class="container mx-auto custom-font">		
 		<div class="text-left ml-18">
-			<h1 class="text-6xl font-bold mb-8">
+			<h1 class="text-6xl font-bold mb-8" data-aos="fade-left">
 				{{$t("contact-title")}}
 			</h1>
 			<p class="content-center" :style="widthClass">If you need any further information, please feel free to contact me.</p>	
 			<section class="block sm:flex sm:gap-10 mt-10 sm:mt-10">
-				<div class="w-full sm:w-2/4 mb-7 sm:mb-0 content-center" :style="widthClass">	
+				<div class="w-full sm:w-2/4 mb-7 sm:mb-0 content-center" :style="widthClass"  data-aos="fade-up">	
 					
 					<div class="input-section">
 						<div class="hover-text">
@@ -23,7 +23,7 @@
 							<button type="submit" class="btn-default">Submit</button>
 						</div>
 					</div>
-				<div class="w-full sm:w-2/4 text-left max-w-4xl ml-4 content-center" :style="widthClass">
+				<div class="w-full sm:w-2/4 text-left max-w-4xl ml-4 content-center" :style="widthClass"  data-aos="fade-up">
 					<GoogleMap api-key="YOUR_GOOGLE_MAPS_API_KEY" style="width: 100%; height: 500px" :center="center" :zoom="15">
 						<Marker :options="markerOptions" />
 					</GoogleMap>

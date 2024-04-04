@@ -27,13 +27,18 @@
             <input type="text" placeholder="Enter your name" />
         </div>
     -->
-   
+    <div class="container mx-auto custom-font block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
+      <div class="button-section">
+          <button type="button" class="btn-default" @click="goBackToProjects()">Go Back</button>
+      </div>
+    </div>
 </template>
 <script lang="ts" setup>
     import { ref, onMounted, onBeforeUnmount } from 'vue';
     import background_kick from '@/assets/background_kick.svg';
     import gif_kick01 from '@/assets/gif_kick01.gif';
     import gif_kick02 from '@/assets/gif_kick02.gif';
+    import router from '@/router';
 
     const imageUrl = ref(background_kick);
 
@@ -56,6 +61,10 @@
       }
     };
 
+    const goBackToProjects = () =>{
+      router.push({ path: "/PersonalWeb/Projects"});
+    };
+
     onMounted(() => {
       adjustTextSize();
       window.addEventListener('resize', adjustTextSize);
@@ -66,7 +75,7 @@
     });
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 .custom-font {
     font-family: Inter;
@@ -95,6 +104,19 @@
 
   .text-overlay-content { 
       text-align: center; /* Center the text horizontally */
+  }
+
+  .button-section {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+    button {
+      height: 60px !important;
+      width: 100% !important;
+      font-size: 18px !important;
+    }
   }
 
   .img {
