@@ -208,7 +208,7 @@
     });
 </script>
 
-<style  lang="scss" scoped>
+<style lang="scss" scoped>
 
   .custom-font {
     font-family: Inter;
