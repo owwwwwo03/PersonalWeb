@@ -1,5 +1,5 @@
 <template>
-	<section class="pt-5 sm:pt-5">
+	<section class="sm:pt-2">
     <swiper
         :modules="modules"
         :loop="true"

@@ -1,7 +1,7 @@
 <template>
 	<div class="container mx-auto custom-font">		
 		<div class="text-left ml-18">
-			<h1 class="text-6xl font-bold mb-8" data-aos="fade-left">
+			<h1 class="font-bold mb-8 ml-4" data-aos="fade-left" :style="headingClass">
 				{{$t("contact-title")}}
 			</h1>
 			<p class="content-center" :style="widthClass">If you need any further information, please feel free to contact me.</p>	
@@ -45,14 +45,17 @@ const markerOptions = { position: center, label: "L", title: "LADY LIBERTY" };
 defineComponent({ components: { GoogleMap, Marker }, center, markerOptions });
 
 const widthClass = ref({});
+const headingClass = ref({});
 
 const adjustSize = () => {
   const screenWidth = window.innerWidth;
   // Adjust text size based on screen width
   if (screenWidth <= 768) {
     widthClass.value = {width:'90%'};
+	headingClass.value = {fontSize:'2.25rem'};
   } else {
     widthClass.value = {width:'100%'};
+	headingClass.value = {fontSize:'3.75rem'};
   }
 };
 

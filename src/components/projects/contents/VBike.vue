@@ -12,7 +12,7 @@
     </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4" data-aos="fade-left">
+        <h1 class="md:text-4x1 lg: font-bold ml-4" data-aos="fade-left" :style="headingClass">
           Review
         </h1>
       </div>
@@ -29,7 +29,7 @@
     </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4" data-aos="fade-left">
+        <h1 class="font-bold ml-4" data-aos="fade-left" :style="headingClass">
           Features
         </h1>
       </div>
@@ -65,7 +65,7 @@
     -->
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4"  data-aos="fade-left">
+        <h1 class="font-bold ml-4"  data-aos="fade-left" :style="headingClass">
           Design
         </h1>
       </div>
@@ -95,7 +95,7 @@
     </div> 
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4" data-aos="fade-left">
+        <h1 class="font-bold ml-4" data-aos="fade-left" :style="headingClass">
           Experiment
         </h1>
       </div>
@@ -169,6 +169,7 @@ const subtitleSizeClass = ref({});
 const contentSizeClass = ref({});
 const imgClass = ref({});
 const widthClass = ref({});
+const headingClass = ref({});
 
 const options = reactive({
   width: '900px', //播放器寬度
@@ -210,12 +211,14 @@ const adjustSize = () => {
     contentSizeClass.value = { fontSize: '14px' };
     imgClass.value = {width:'90%'};
     widthClass.value = {width:'90%'};
+    headingClass.value = {fontSize:'2.25rem'};
   } else {
-    titleSizeClass.value = { fontSize: '150px' };
+    titleSizeClass.value = { fontSize: '120px' };
     subtitleSizeClass.value = { fontSize: '40px' };
     contentSizeClass.value = { fontSize: '18px' };
     imgClass.value = {width:'60%'};
     widthClass.value = {width:'100%'};
+    headingClass.value = {fontSize:'3.75rem'};
   }
 };
 

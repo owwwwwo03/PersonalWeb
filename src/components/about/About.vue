@@ -1,7 +1,7 @@
 <template>
 	<div class="container mx-auto custom-font">
 		<div class="text-left ml-18">
-		<h1 class="text-6xl font-bold" data-aos="fade-left">
+		<h1 class="font-bold ml-4" data-aos="fade-left" :style="headingClass">
 			{{$t("about-title")}}
 		</h1>
 		<section class="block sm:flex sm:gap-10 mt-10 sm:mt-20">
@@ -137,14 +137,17 @@ import feather from 'feather-icons';
 import { ref, onMounted, onUpdated, onBeforeUnmount } from 'vue';
 
 const widthClass = ref({});
+const headingClass = ref({});
 
 const adjustSize = () => {
   const screenWidth = window.innerWidth;
   // Adjust text size based on screen width
   if (screenWidth <= 768) {
     widthClass.value = {width:'90%'};
+	headingClass.value = {fontSize:'2.25rem'};
   } else {
     widthClass.value = {width:'100%'};
+	headingClass.value = {fontSize:'3.75rem'};
   }
 };
 

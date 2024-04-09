@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Banner class="mb-16 mb-sm-8" />
+    <Banner class="mb-8 mb-sm-8" />
   </div>
 	<div class="container mx-auto custom-font">
     <About class="mb-5 mb-sm-8"/>

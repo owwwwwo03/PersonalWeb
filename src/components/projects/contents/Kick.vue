@@ -13,7 +13,7 @@
       </div>
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
-        <h1 class="text-6xl font-bold ml-4">
+        <h1 class="font-bold ml-4" :style="headingClass">
           Review
         </h1>
       </div>
@@ -45,7 +45,7 @@
     const titleSizeClass = ref({});
     const subtitleSizeClass = ref({});
     const contentSizeClass = ref({});
-    
+    const headingClass = ref({});
 
     const adjustTextSize = () => {
       const screenWidth = window.innerWidth;
@@ -54,10 +54,12 @@
         titleSizeClass.value = { fontSize: '50px' };
         subtitleSizeClass.value = { fontSize: '16px' };
         contentSizeClass.value = { fontSize: '14px' };
+        headingClass.value = {fontSize:'2.25rem'};
       } else {
-        titleSizeClass.value = { fontSize: '150px' };
+        titleSizeClass.value = { fontSize: '120px' };
         subtitleSizeClass.value = { fontSize: '40px' };
         contentSizeClass.value = { fontSize: '18px' };
+        headingClass.value = {fontSize:'3.75rem'};
       }
     };
 
