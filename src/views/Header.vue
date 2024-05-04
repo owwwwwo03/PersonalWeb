@@ -6,54 +6,54 @@
       <!-- Header links -->
       <div>
         <div class="custom-font flex" :class="spaceClass">
-           <!-- Header logos -->
-          <a class="content-center" href="/PersonalWeb/">Home</a>
-          <ul class="flex space-x-8">
+           <!-- Header logos -->         
+          <ul class="flex space-x-8 mr-2">
+            <a href="/PersonalWeb/" class="ml-4">{{$t("home")}}</a>
             <router-link to="/PersonalWeb/projects" class="nav-link">{{$t("project-title")}}</router-link>
             <router-link to="/PersonalWeb/about" class="nav-link">{{$t("about-title")}}</router-link>
             <router-link to="/PersonalWeb/contact" class="nav-link">{{$t("contact-title")}}</router-link>
-          </ul>
-          <!-- Header links global-->
-          <div>
-            <button type="button" class="relative content-center" @click="() => { isLangsHidden = !isLangsHidden }">
-              <i data-feather="globe"></i>
-            </button>
-            <div id="dropdown-langs" :class="{ hidden: isLangsHidden }"
-              class="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16"  style="transform: translateX(-150px)">
-              <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="langs-button">
-                <li>
-                  <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('en-US')">
-                    <div class="inline-flex items-center">
-                      <div class="w-6">
-                        <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'en-US' }" />
+            <!-- Header links global-->
+            <div>
+              <button type="button" class="relative content-centers flex" @click="() => { isLangsHidden = !isLangsHidden }">
+                <i data-feather="globe"></i>
+              </button>
+              <div id="dropdown-langs" :class="{ hidden: isLangsHidden }"
+                class="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16" style="transform: translateX(-140px)">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="langs-button">
+                  <li>
+                    <button type="button" class="inline-flex px-4 py-2 text-sm" @click="changeLanguage('en-US')">
+                      <div class="inline-flex items-center">
+                        <div class="w-6">
+                          <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'en-US' }" />
+                        </div>
+                        English
                       </div>
-                      English
-                    </div>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('zh-TW')">
-                    <div class="inline-flex items-center">
-                      <div class="w-6">
-                        <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'zh-TW' }" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="inline-flex px-4 py-2 text-sm" @click="changeLanguage('zh-TW')">
+                      <div class="inline-flex items-center">
+                        <div class="w-6">
+                          <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'zh-TW' }" />
+                        </div>
+                        繁體中文
                       </div>
-                      繁體中文
-                    </div>
-                  </button>
-                </li>
-                <li>
-                  <button type="button" class="inline-flex w-full px-4 py-2 text-sm" @click="changeLanguage('ja-JP')">
-                    <div class="inline-flex items-center">
-                      <div class="w-6">
-                        <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'ja-JP' }" />
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" class="inline-flex px-4 py-2 text-sm" @click="changeLanguage('ja-JP')">
+                      <div class="inline-flex items-center">
+                        <div class="w-6">
+                          <CheckIcon class="h-4 w-4" :class="{ hidden: selectedLanguage != 'ja-JP' }" />
+                        </div>
+                        日本語
                       </div>
-                      日本語
-                    </div>
-                  </button>
-                </li>
-              </ul>
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </ul>         
         </div>
       </div>
     </div>
@@ -89,7 +89,7 @@ const adjustSize = () => {
   if (screenWidth <= 768) {
     spaceClass.value = 'space-x-10';
   } else {
-    spaceClass.value = 'space-x-20';
+    spaceClass.value = 'space-x-30';
   }
 };
 
@@ -149,7 +149,7 @@ onBeforeUnmount(() => {
   .relative {
     width: auto;
   }
-  #dropdown-langs {
+  .dropdown-langs {
     width: 100%;
     margin-left: 0;
   }

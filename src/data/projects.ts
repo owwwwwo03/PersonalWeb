@@ -4,6 +4,8 @@ import fabAR_svg from '@/assets/projects_fab_ar.svg';
 import kick_svg from '@/assets/projects_kick.svg';
 import vbike_svg from '@/assets/projects_vbike.svg';
 import kuchipa_svg from '@/assets/projects_kuchipa.svg';
+import doddle_svg from '@/assets/projects_doddle.svg';
+import metahuman_svg from '@/assets/projects_metahuman.svg';
 
 const projects = [
     {
@@ -20,7 +22,7 @@ const projects = [
 		category: ['HCI','AI'],
         skill:['Unity','Stable Diffusion','UIUX'],
         url: '/PersonalWeb/projects/doddle',
-        imgUrl:fabAR_svg,
+        imgUrl:doddle_svg,
     },
     {
         id: 3,
@@ -28,7 +30,7 @@ const projects = [
 		category: ['HCI'],
         skill:['Unreal','Azure'],
         url: '/PersonalWeb/projects/metaHuman',
-        imgUrl:fabAR_svg,
+        imgUrl:metahuman_svg,
     },
     {
         id: 4,

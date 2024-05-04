@@ -190,9 +190,9 @@
       } else {
         titleSizeClass.value = { fontSize: '120px' };
         subtitleSizeClass.value = { fontSize: '40px' };
-        contentSizeClass.value = { fontSize: '18px' };
+        contentSizeClass.value = { fontSize: '18px',maxWidth: '60%',margin: '0px auto' };
         imgClass.value = {width:'60%'};
-        widthClass.value = {width:'100%'};
+        widthClass.value = {width:'98%'};
         headingClass.value = {fontSize:'3.75rem'};
       }
     };
