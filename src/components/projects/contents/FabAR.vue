@@ -3,11 +3,9 @@
         <!-- Text on the background image -->
         <div class="text-overlay custom-font">
             <p :style="titleSizeClass" class="text-overlay-content mb-2 font-bold">Fab AR</p>
-            <p :style="subtitleSizeClass" class="text-overlay-content mb-6">智慧工廠AR應用</p>
+            <p :style="subtitleSizeClass" class="text-overlay-content mb-6">{{$t("project1-subtitle")}}</p>
             <p :style="contentSizeClass" class="text-overlay-content">
-                FabAR 是一套以工廠巡檢、路線指引作做為模擬情境的系統。
-                組合情境中所需要的圖表顯示、資料串接以及QRcode顯示定位等Compoent。
-                目的為讓公司二次開發者可以透過簡單操作的方式利用各式元件進行開發，快速部署到Hololens或Android上應用。</p>
+              {{$t("project1-brief")}}</p>
         </div>
     </div>
     <div class="container mx-auto custom-font">
@@ -19,8 +17,7 @@
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-20 justify-center">
         <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
-            FabAR 以Unity環境為主，打造Fab應用的各項AR應用的Component ，讓二次開發者可以透過簡單操作我們打包好的元件去進行開發，然後部署到Hololens上去使用。
-            FabAR製作開發了QR code、UI 、IOT 、Web Browser等元件，讓使用者針對自己的需求去下載，依照各項應用場域進行後續的開發工作。
+          {{$t("project1-review-content1")}}
         </p>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
@@ -36,14 +33,13 @@
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
         <h1 class="text-2xl font-bold ml-4" data-aos="fade-up">
-          工廠巡檢
+          {{$t("project1-feature-subtitle1")}}
         </h1>
       </div>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-6 sm:mt-10 justify-center">
         <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
-          使用者可利用掃描QRcode去監控機台的資訊，並且可自由地去拖拉資訊面板到自己想要的位置。
-          當機台資訊出現異常時，使用者可以開啟修機指引文件去輔助檢查。如果仍需近一步的操作指引，可以進到Guides App去瀏覽事先編輯好的Guides去看指南或資料。
+          {{$t("project1-feature-content1")}}
         </p>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
@@ -52,14 +48,13 @@
     <div class="container mx-auto custom-font">
       <div class="text-left ml-18 mt-10">
         <h1 class="text-2xl font-bold ml-4" data-aos="fade-up">
-          路線指引
+          {{$t("project1-feature-subtitle2")}}
         </h1>
       </div>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-6 sm:mt-10 justify-center">
         <p class="ml-4 content-center" :style="widthClass" data-aos="fade-up">
-            使用者透過已開發的Component去進行二次開發。以路線指引做為模擬情境。
-            將箭頭、標籤、機台資訊等物件任意地拖拉到指定位置後儲存，去完成路線指引的規劃。
+          {{$t("project1-feature-content2")}}
         </p>
     </div>
     <div class="container mx-auto block sm:flex sm:gap-10 mt-10 sm:mt-10 justify-center">
