@@ -15,25 +15,9 @@ const projects = [
         skill:['Unity','Hololens','MRTK'],
         url: '/PersonalWeb/projects/fabAR',
         imgUrl:fabAR_svg,
-    },
+    },    
     {
         id: 2,
-		title: 'Doddle',
-		category: ['HCI','AI'],
-        skill:['Unity','Stable Diffusion','UIUX'],
-        url: '/PersonalWeb/projects/doddle',
-        imgUrl:doddle_svg,
-    },
-    {
-        id: 3,
-		title: 'MetaHuman',
-		category: ['HCI'],
-        skill:['Unreal','Azure'],
-        url: '/PersonalWeb/projects/metaHuman',
-        imgUrl:metahuman_svg,
-    },
-    {
-        id: 4,
 		title: 'VBike',
 		category: ['VR','HCI'],
         skill:['Unity','GLSL/HLSL','UIUX','Arduino'],
@@ -41,7 +25,7 @@ const projects = [
         imgUrl:vbike_svg,
     },
     {
-        id: 5,
+        id: 3,
 		title: 'Kuchipa',
 		category: ['HCI'],
         skill:['Unity','Mediapipe','OpenCV'],
@@ -50,12 +34,28 @@ const projects = [
     },
     
     {
-        id: 6,
+        id: 4,
 		title: 'Kick',
 		category: ['Product Design'],
         skill:['3D','Arduino'],
         url: '/PersonalWeb/projects/kick',
         imgUrl:kick_svg,
+    },
+    {
+        id: 5,
+		title: 'Doddle',
+		category: ['HCI','AI'],
+        skill:['Unity','Stable Diffusion','UIUX'],
+        url: '/PersonalWeb/projects/doddle',
+        imgUrl:doddle_svg,
+    },
+    {
+        id: 6,
+		title: 'MetaHuman',
+		category: ['HCI'],
+        skill:['Unreal','Azure'],
+        url: '/PersonalWeb/projects/metaHuman',
+        imgUrl:metahuman_svg,
     },
 ];
 

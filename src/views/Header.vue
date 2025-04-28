@@ -15,7 +15,7 @@
             <!-- Header links global-->
             <div>
               <button type="button" class="relative content-centers flex" @click="() => { isLangsHidden = !isLangsHidden }">
-                <i data-feather="globe"></i>
+                <i data-feather="globe" class="mt-1"></i>
               </button>
               <div id="dropdown-langs" :class="{ hidden: isLangsHidden }"
                 class="z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute top-16" style="transform: translateX(-140px)">

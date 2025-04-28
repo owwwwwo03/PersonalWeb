@@ -28,7 +28,7 @@ const socials = reactive([
   {
     id: 2,
     name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/yi-xiang-su-898396169/',
+    url: 'https://www.linkedin.com/in/seanyxsu/',
     image: linkedin_logo
   },
   {
