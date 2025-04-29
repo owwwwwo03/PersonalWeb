@@ -80,6 +80,10 @@
 				</div>
 				<div class="mb-4" data-aos="fade-up">
 					<div class="flex items-center mb-2">
+						<img class="border-none" src="../../assets/delta_logo.svg" />
+						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-experience-04") }}</p>
+					</div>
+					<div class="flex items-center mb-2">
 						<img class="border-none" src="../../assets/auo_logo.svg" />
 						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-experience-01") }}</p>
 					</div>
