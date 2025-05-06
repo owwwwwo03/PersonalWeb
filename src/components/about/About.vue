@@ -83,6 +83,10 @@
 						<img class="border-none" src="../../assets/delta_logo.svg" />
 						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-experience-04") }}</p>
 					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-04-content-01") }}</p>
+					</div>
 					<div class="flex items-center mb-2">
 						<img class="border-none" src="../../assets/auo_logo.svg" />
 						<p class="text-2x1 font-semibold ml-3">{{ $t("about-content-experience-01") }}</p>
@@ -98,6 +102,10 @@
 					<div class="flex items-center text-xl ml-12 mb-1">
 						<p class="ml-1">•</p>
 						<p class="ml-2">{{ $t("about-content-experience-01-content-03") }}</p>
+					</div>
+					<div class="flex items-center text-xl ml-12 mb-1">
+						<p class="ml-1">•</p>
+						<p class="ml-2">{{ $t("about-content-experience-01-content-04") }}</p>
 					</div>
 				</div>
 				<div class="mb-4" data-aos="fade-up">
