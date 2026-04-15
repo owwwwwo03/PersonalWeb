@@ -13,10 +13,8 @@
 <rect x="-505" y="-63" width="1510" height="1147" fill="url(#pattern3_2319_54)"/>
 <rect x="-137" y="-7" width="1343" height="1057" fill="url(#pattern4_2319_54)"/>
 <g opacity="0.5" style="mix-blend-mode:soft-light">
-<rect x="-36" y="-30" width="1080" height="1080" fill="white"/>
 <rect x="-36" y="-30" width="1080" height="1080" fill="url(#pattern5_2319_54)" style="mix-blend-mode:darken"/>
 </g>
-<rect x="5" y="4" width="1000" height="1001" fill="black" fill-opacity="0.5"/>
 <rect opacity="0.8" x="9" y="9" width="992" height="992" rx="46" stroke="white" stroke-width="8"/>
 </g>
 </g>
